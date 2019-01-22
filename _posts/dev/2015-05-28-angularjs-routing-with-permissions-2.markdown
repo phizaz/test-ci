@@ -2,7 +2,8 @@
 layout: post
 title: AngularJS Routing with Permissions
 date: 2015-05-28 11:18:00.000000000 +07:00
-tags: angular
+categories: dev
+tags: [angular, web]
 ---
 ไม่ว่าจะเขียนเว็บด้วยเทคนิคอะไรก็ตาม สิ่งที่เราต้องทำก็ไม่พ้นระบบ Routing และยิ่งมากกว่านั้นคือจำกัดว่าใครสามารถเข้าไปชมหน้าไหนได้บ้าง (authorization)
 
