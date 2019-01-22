@@ -1,6 +1,6 @@
 ---
 layout: home
-title: All
+title: All Posts
 permalink: /all/
 pagination: 
   enabled: true
