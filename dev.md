@@ -3,6 +3,10 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-pagination:
-    enabled: true
+title: Development
+permalink: /dev/
+pagination: 
+  enabled: true
+  category: dev
+  permalink: /:num/
 ---
