@@ -2,6 +2,7 @@
 layout: post
 title: SSH using docker
 date: 2017-02-04 09:39:12.000000000 +07:00
+categories: dev
 tags: docker
 ---
 Let's say you want to `ssh` using docker, and also you want to be able to access all the settings you have with our old ssh, here is how you do it !

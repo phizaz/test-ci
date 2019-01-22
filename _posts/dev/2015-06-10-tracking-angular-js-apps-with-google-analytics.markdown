@@ -2,6 +2,7 @@
 layout: post
 title: Tracking Angular.js Apps with Google Analytics
 date: 2015-06-10 09:48:00.000000000 +07:00
+categories: dev
 tags: web
 ---
 Google Analytics is a great service. It provides us, web developers, variety of insights about our users. Obviously, the more we understand our clients the more we can push our websites to the better stage for them.

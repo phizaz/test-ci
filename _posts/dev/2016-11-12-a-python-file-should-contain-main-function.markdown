@@ -2,6 +2,7 @@
 layout: post
 title: A Python File Should Contain "main()" Function
 date: 2016-11-12 14:42:41.000000000 +07:00
+categories: dev
 tags: python
 ---
 I think I found a recipe for a new Python file:

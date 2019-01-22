@@ -2,6 +2,7 @@
 layout: post
 title: Mysql "-e" writing not to log bin
 date: 2017-01-17 03:02:24.000000000 +07:00
+categories: dev
 tags: mysql
 ---
 Since, mysql version 5.7 there is no easy way to turn off the log bin globally. In the other hand, you can stop the log bin locally (during session) using `SET sql_log_bin = 0` but this way the result won't last over sessions. 

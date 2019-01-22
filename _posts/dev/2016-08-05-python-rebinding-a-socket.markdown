@@ -2,6 +2,7 @@
 layout: post
 title: Python Rebinding  A Socket
 date: 2016-08-05 08:50:27.000000000 +07:00
+categories: dev
 tags: python
 ---
 For `socket`, use: 

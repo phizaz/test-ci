@@ -2,6 +2,7 @@
 layout: post
 title: Ubuntu 16.04  with Nvidia GTX1060 Sound Doesn't Work
 date: 2016-09-03 06:23:11.000000000 +07:00
+categories: dev
 tags: ubuntu
 ---
 Even after properly installed Nvidia graphic card driver (367.44, latest) still the sound doesn't work.
@@ -19,3 +20,4 @@ So, the device is there and working, but somehow it is not listed in the ubuntu 
 I suspect that this still might not be the *right way* that really gets to the point, but at least it works and I'm so tired of this puny problem already! :D
 
 Update: I think I have found a reasonable solution! It's in the **pavucontrol** I've mentioned. Go to **Configuration** menu in it. You'll see something like **Built-in Audio**. This one doesn't work, just turn if off. Now go see the **Output Devices** menu. You should see there is only **HDA Nvidia Digital Stereo** now, which is great, I think you should now hear the sound already.
+categories: dev

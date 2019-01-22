@@ -2,6 +2,7 @@
 layout: post
 title: You should handle timeout in all the IO callbacks in NodeJS
 date: 2017-06-29 04:30:49.000000000 +07:00
+categories: dev
 tags: js
 ---
 At first, you might hope that just calls the function and let it tell you just when the job is done and you wait ... and wait. Soon, you realize that the callback you have been waiting will never come.

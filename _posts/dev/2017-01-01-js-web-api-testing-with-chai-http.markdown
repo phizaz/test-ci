@@ -2,6 +2,7 @@
 layout: post
 title: 'JS: Web Server Testing with "chai-http"'
 date: 2017-01-01 06:13:11.000000000 +07:00
+categories: dev
 tags: js
 ---
 We're going to test a web api using `GET`, `POST` using `chai-http` by actual http request.

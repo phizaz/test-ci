@@ -2,6 +2,7 @@
 layout: post
 title: Run Commands in Docker by Preserving Rights and Ownerships
 date: 2017-03-12 07:30:02.000000000 +07:00
+categories: dev
 tags: docker
 ---
 ```

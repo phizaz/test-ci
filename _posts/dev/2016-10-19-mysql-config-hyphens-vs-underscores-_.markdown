@@ -2,6 +2,7 @@
 layout: post
 title: MySQL Config Hyphens (-) vs Underscores (_)
 date: 2016-10-19 06:15:18.000000000 +07:00
+categories: dev
 tags: mysql
 ---
 Do they have any difference ? 

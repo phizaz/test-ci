@@ -2,6 +2,7 @@
 layout: post
 title: Async Await with Timeout
 date: 2017-06-07 08:11:10.000000000 +07:00
+categories: dev
 tags: js
 ---
 It's not trivial to put a timeout on an async process.

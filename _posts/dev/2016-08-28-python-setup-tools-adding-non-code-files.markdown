@@ -2,6 +2,7 @@
 layout: post
 title: 'Python Setup Tools : Adding Non-Code Files'
 date: 2016-08-28 16:09:05.000000000 +07:00
+categories: dev
 tags: python
 ---
 *Took from http://python-packaging.readthedocs.io/en/latest/non-code-files.html*

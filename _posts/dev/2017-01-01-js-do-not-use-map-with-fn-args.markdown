@@ -2,6 +2,7 @@
 layout: post
 title: 'JS: Do not use .map() with fn(...args)'
 date: 2017-01-01 06:30:50.000000000 +07:00
+categories: dev
 tags: js
 ---
 Okay, you might say **"of course not!"**, well I just didn't know T_T

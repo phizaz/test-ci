@@ -2,6 +2,7 @@
 layout: post
 title: Migration from Mac to PC
 date: 2017-01-06 16:26:24.000000000 +07:00
+categories: dev
 tags: windows mac
 ---
 **After a month of migration ... I've made quite a difference so I'll write a new article for it.**
@@ -64,6 +65,7 @@ This is done by **AutoHotKey**. It is an awesome piece of software. You can writ
 The most frustrating part was the `return` part. I didn't know that the script works like `switch() { case ... }` syntax, it will just fall through if not encountered a `break` or `return`.
 
 Update: I updated many more key-mapping if you find it interesting you can get it [here](https://gist.github.com/phizaz/031e6620568b3aa0fc8ae801711cc0b6)
+categories: dev
 
 Also, don't forget to set it run automatically after boot. And If you're like me you don't know where to find the `startup` folder anymore (in Windows 10). Just type this in `run.exe` :
 
@@ -74,6 +76,7 @@ shell:startup
 Now, put the **compiled script** in to it. You are good to go!
 
 Update: I've found starting up program in this way is quite slow (may be with low priority), using **Task Scheduler** is way faster !
+categories: dev
 
 ### Touch Pad Problems
 

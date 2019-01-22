@@ -2,6 +2,7 @@
 layout: post
 title: Homebrew's MySQL binds 127.0.0.1 by default
 date: 2016-09-14 02:46:06.000000000 +07:00
+categories: dev
 tags: mysql
 ---
 I tried configuring `bind-address` option in `my.cnf` many attempts, but found no success.
@@ -19,6 +20,7 @@ It's kinda like `mysqld` is bound to run as `127.0.0.1` regardless of the `my.cn
 
 
 "I have been banging my head against this error today on OSX Yosemite with MySQL 5.7 recently updated with Homebrew. Following suggestions on StackOverflow and elsewhere, I hunted around after my.cnf files all of which specified bind-address=0.0.0.0. I even removed and reinstalled MySQL following these instructions and then reinstalled using brew install mysql. Still no remote connections allowed.
+categories: dev
 
 It wasn't until I ran ps -ax | grep mysql and noticed that the bind address was being passed in the launch command (thus overriding any my.cnf files) that I dug some more and found out that Homebrew binds MySQL to 127.0.0.1 by default.
 

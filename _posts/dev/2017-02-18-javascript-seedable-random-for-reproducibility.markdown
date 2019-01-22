@@ -2,6 +2,7 @@
 layout: post
 title: Javascript Seedable Random for reproducibility
 date: 2017-02-18 08:28:55.000000000 +07:00
+categories: dev
 tags: js
 ---
 I would never understand the seed of seedable random functions, if not from the academics background or with testing in mind.

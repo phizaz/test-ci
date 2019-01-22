@@ -2,6 +2,7 @@
 layout: post
 title: 'RemoteDocker: A fresh approach to run on remote host without hassle'
 date: 2016-09-03 14:48:42.000000000 +07:00
+categories: dev
 tags: python
 ---
 I have a fast-computer at home which I don't use it as often as my laptop. I intentionally bought it for computation-intensive tasks. But running an arbitrary script on a remote host is always a hassle, never was smooth.

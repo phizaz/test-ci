@@ -2,6 +2,7 @@
 layout: post
 title: Using DLink's DWA 171 USB Wireless Dongle with Ubuntu 16.04
 date: 2016-11-11 19:21:05.000000000 +07:00
+categories: dev
 tags: ubuntu
 ---
 It doesn't come with a working official driver though.
@@ -23,3 +24,4 @@ sudo modprobe -a rtl8812au
 After reboot, your device will discover for wireless networks.
 
 It's important to note that after system updates, you'll need to recompile the driver and install it again. Simply, restart the whole process except the cloning one.
+categories: dev

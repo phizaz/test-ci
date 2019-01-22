@@ -2,6 +2,7 @@
 layout: post
 title: Docker-compose to link outside containers ?
 date: 2017-01-15 09:36:11.000000000 +07:00
+categories: dev
 tags: docker
 ---
 Let say we have the two docker-compose files in separate directories which we want to link together.

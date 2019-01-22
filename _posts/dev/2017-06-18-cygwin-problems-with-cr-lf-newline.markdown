@@ -2,6 +2,7 @@
 layout: post
 title: Cygwin Problems with CR/LF newline
 date: 2017-06-18 07:29:50.000000000 +07:00
+categories: dev
 tags: cygwin
 ---
 Upon finding this short post, you might have encountered the notoriously newline issue in Windows. The more you try to be UNIX-like on Windows the more the issue pronounces itself.

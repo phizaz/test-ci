@@ -2,6 +2,7 @@
 layout: post
 title: Python 3 (64 bit) + scipy on Windows
 date: 2017-05-05 04:28:37.000000000 +07:00
+categories: dev
 tags: python
 ---
 ## I tried original one, but didn't support `scipy`

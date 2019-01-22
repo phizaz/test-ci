@@ -2,6 +2,7 @@
 layout: post
 title: Python turn async function back to sync
 date: 2017-02-04 06:56:24.000000000 +07:00
+categories: dev
 tags: python
 ---
 Actually, this is straightforward and those who works with `asyncio` library use all the time. 

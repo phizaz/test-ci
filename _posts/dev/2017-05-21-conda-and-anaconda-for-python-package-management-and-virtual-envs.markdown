@@ -2,6 +2,7 @@
 layout: post
 title: Conda (and Anaconda) for python package management and virtual envs
 date: 2017-05-21 14:49:51.000000000 +07:00
+categories: dev
 tags: python
 ---
 ### Of installing `scipy`
@@ -81,6 +82,7 @@ But don't lose hope yet! You can search for it, there are many other channels as
 ![](/content/images/2017/05/2017-05-21-21_36_52-conda-fastcluster---Google-Search.png)
 
 There are many candidate channels, but I tend to be fond of a *larger* channel. In this case, **conda-forge** is the winner. 
+categories: dev
 
 (If you want to know more about **conda-forge** you can see its homepage [here](https://conda-forge.github.io/))
 

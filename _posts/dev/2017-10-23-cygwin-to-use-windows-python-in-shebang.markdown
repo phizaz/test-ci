@@ -2,6 +2,7 @@
 layout: post
 title: 'Cygwin: To use Windows Python in shebang'
 date: 2017-10-23 06:37:22.000000000 +07:00
+categories: dev
 tags: cygwin
 ---
 Create a bash script as a proxy:

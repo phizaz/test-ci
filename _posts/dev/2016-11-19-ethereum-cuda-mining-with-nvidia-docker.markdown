@@ -2,6 +2,7 @@
 layout: post
 title: Ethereum CUDA Mining with nvidia-docker
 date: 2016-11-19 08:34:52.000000000 +07:00
+categories: dev
 tags: cuda, crypto
 ---
 Somebody has done quite a good job : https://github.com/Anthony-Tatowicz/docker-ethminer

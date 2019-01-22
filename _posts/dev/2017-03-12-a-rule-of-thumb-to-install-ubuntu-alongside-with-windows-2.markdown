@@ -2,6 +2,7 @@
 layout: post
 title: A Rule of thumb to Install Ubuntu Alongside with Windows
 date: 2017-03-12 07:09:36.000000000 +07:00
+categories: dev
 tags: ubuntu windows
 ---
 ***A rule of thumb is: if you install windows in UEFI mode (which Windows 10 is almost always be), you will need to install Ubuntu in UEFI mode as well.***

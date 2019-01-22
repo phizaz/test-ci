@@ -2,6 +2,7 @@
 layout: post
 title: Swap Alt and Ctrl Ubuntu 16.04
 date: 2017-03-12 07:16:41.000000000 +07:00
+categories: dev
 tags: ubuntu
 ---
 Using `dconf-editor`, if you have already tried the `xmodmap` way, tried this one ... it's superior because the **xmodmap** will fail (and need to be rerun) after you change the keyboard layout, furthermore, it has no currently reliable way to start it on login or after boot.
@@ -13,6 +14,7 @@ sudo apt install dconf-editor
 ```
 
 Open it up, and see the `org.gnome.desktop.input-sources.xkb-options`, you might see `[]` for now, but update it to `['ctrl:swap_lalt_lctl','ctrl:swap_ralt_rctl']`.
+categories: dev
 
 You should see the effect immediately.
 
@@ -27,6 +29,7 @@ So, another way is through the `compizconfig-settings-manager`, if you don't hav
 In it, you should find the **Ubuntu Unity Plugin** section, go to **Switcher**. 
 
 Now update it to be as follows, see the **Key to start the switcher** is now set to `<Control>Tab`:
+categories: dev
 
 ![](/content/images/2017/03/Screenshot-from-2017-03-11-23-52-36.png)
 

@@ -2,6 +2,7 @@
 layout: post
 title: Prevent accidentally executing  rm -rf /*
 date: 2016-09-01 04:19:26.000000000 +07:00
+categories: dev
 tags: ubuntu
 ---
 It happened to me! 

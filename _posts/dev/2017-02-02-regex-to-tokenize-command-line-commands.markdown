@@ -2,6 +2,7 @@
 layout: post
 title: Javascript RegEx to tokenize command line commands
 date: 2017-02-02 07:11:40.000000000 +07:00
+categories: dev
 tags: js
 ---
 Regex: 

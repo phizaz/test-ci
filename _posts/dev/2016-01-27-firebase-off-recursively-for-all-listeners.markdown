@@ -2,6 +2,7 @@
 layout: post
 title: Firebase.off() Recursively for All Listeners
 date: 2016-01-27 11:11:00.000000000 +07:00
+categories: dev
 tags: web
 ---
 หากท่านเคยใช้ firebase ท่านก็มักจะคุ้นชินกับการใช้ method `ref.on('..', callback);` ของ firebase ซึ่งเป็นวิธีการหลักในการอ่านค่าจาก database ของ firebase ซึ่งอาศัยวิธีการสร้าง listener นั่นเอง

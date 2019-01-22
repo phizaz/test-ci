@@ -3,6 +3,7 @@ layout: post
 title: Nosetest  multi-process will run "TestCase" concurrently, but not smaller than
   that
 date: 2016-08-04 03:41:43.000000000 +07:00
+categories: dev
 ---
 Using `--processes=4` which enables the multi-process testing mode for Noetest you might expect tests be run in fully concurrent, but here only each `TestCase` will be run that way, not a smaller unit than that.
 

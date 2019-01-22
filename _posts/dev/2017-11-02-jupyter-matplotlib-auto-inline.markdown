@@ -2,6 +2,7 @@
 layout: post
 title: Jupyter matplotlib auto inline
 date: 2017-11-02 12:17:25.000000000 +07:00
+categories: dev
 tags: matplotlib
 ---
 You might need to use this magic:

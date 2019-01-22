@@ -2,6 +2,7 @@
 layout: post
 title: Access to a Docker for OSX Host from a container
 date: 2016-09-13 16:55:39.000000000 +07:00
+categories: dev
 tags: docker mac
 ---
 Setting `network` as `host` is not quite enough for this case.

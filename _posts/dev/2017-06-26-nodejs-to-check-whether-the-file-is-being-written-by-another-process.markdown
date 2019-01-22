@@ -2,6 +2,7 @@
 layout: post
 title: NodeJS to check whether the file is being written by another process
 date: 2017-06-26 08:34:03.000000000 +07:00
+categories: dev
 tags: js
 ---
 To me at first, it should have a simple graceful solution, but turned out it has none. 

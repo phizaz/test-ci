@@ -2,6 +2,7 @@
 layout: post
 title: Google Chrome shortcuts for pin/unpin tabs
 date: 2017-02-04 06:51:57.000000000 +07:00
+categories: dev
 tags: chrome
 ---
 Just go and get [**Ferro**](http://www.getferro.com/), a google chrome extension, that enables shortcuts for google chrome.

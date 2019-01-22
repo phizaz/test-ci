@@ -2,6 +2,7 @@
 layout: post
 title: What's nvcc compute version ?
 date: 2016-11-19 07:14:27.000000000 +07:00
+categories: dev
 tags: cuda
 ---
 Actually, it is something called "compute capabilities" which ranges from 2.X to 6.X depends on your card.

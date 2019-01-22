@@ -2,6 +2,7 @@
 layout: post
 title: Matplotlib Set Figure Size
 date: 2016-11-23 06:26:17.000000000 +07:00
+categories: dev
 tags: matplotlib
 ---
 ```

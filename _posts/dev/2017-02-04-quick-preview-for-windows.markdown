@@ -2,6 +2,7 @@
 layout: post
 title: Quick Preview for Windows
 date: 2017-02-04 06:44:50.000000000 +07:00
+categories: dev
 tags: windows
 ---
 (thread: http://www.howtogeek.com/249557/how-to-add-os-xs-quick-look-feature-to-windows/)

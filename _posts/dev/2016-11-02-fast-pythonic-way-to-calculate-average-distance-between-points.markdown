@@ -2,6 +2,7 @@
 layout: post
 title: Fast Pythonic Way to Calculate Average Distance Between Points
 date: 2016-11-02 16:46:51.000000000 +07:00
+categories: dev
 tags: python
 ---
 Finding an average distance between two sets of points (vectors) in a n-demensional euclidean space can be **slow** ... harnessing `O(a * b * n)` of time complexity, where `a` and `b` denote the numbers of points in each set.

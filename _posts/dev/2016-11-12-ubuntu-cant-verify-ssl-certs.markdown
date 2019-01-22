@@ -2,6 +2,7 @@
 layout: post
 title: Ubuntu Can't Verify SSL Certs
 date: 2016-11-12 13:28:20.000000000 +07:00
+categories: dev
 tags: ubuntu
 ---
 I found something like this while `wget` a file from `https` protocol: 

@@ -2,9 +2,11 @@
 layout: post
 title: Python's Multiprocess Pool Memory Leak
 date: 2016-11-08 05:09:48.000000000 +07:00
+categories: dev
 tags: python
 ---
 Update : I investigated further to the problem, and found a better solution. I will write a topic on that.
+categories: dev
 
 Actually, I don't know how this happen, just can't narrow it down enough to a pin point.
 

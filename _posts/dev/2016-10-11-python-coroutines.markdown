@@ -2,6 +2,7 @@
 layout: post
 title: Python Coroutines
 date: 2016-10-11 10:10:53.000000000 +07:00
+categories: dev
 tags: python
 ---
 - Generators (pulling)

@@ -2,6 +2,7 @@
 layout: post
 title: Typescript Project Initialization
 date: 2017-01-14 03:06:20.000000000 +07:00
+categories: dev
 tags: js typescript
 ---
 Create `tsconfig.json`

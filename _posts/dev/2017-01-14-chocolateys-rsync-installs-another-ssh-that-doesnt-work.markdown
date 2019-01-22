@@ -2,6 +2,7 @@
 layout: post
 title: Chocolatey's Rsync installs another ssh that doesn't work
 date: 2017-01-14 06:28:39.000000000 +07:00
+categories: dev
 tags: windows
 ---
 As rsync requires `ssh`, it automatically installs one for you. The problem is its copy of ssh will replace one of yours. 

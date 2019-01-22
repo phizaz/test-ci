@@ -2,6 +2,7 @@
 layout: post
 title: Redux for C#.NET 2.0
 date: 2016-11-01 16:07:24.000000000 +07:00
+categories: dev
 tags: c#
 ---
 Refer to : [github.com/phizaz/redux-dotnet2.0](https://github.com/phizaz/redux-dotnet2.0)

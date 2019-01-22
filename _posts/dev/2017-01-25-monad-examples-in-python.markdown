@@ -2,9 +2,11 @@
 layout: post
 title: Monad Examples in Python
 date: 2017-01-25 13:59:12.000000000 +07:00
+categories: dev
 tags: python
 ---
 I have heard this keyword quite a long time ago. I searched for it in google but not really the top links could elucidate it for me. 
+categories: dev
 
 **Wikipedia** just only makes the matter worse... a bunch of non-sense examples and far-too-general explanations.
 

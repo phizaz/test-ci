@@ -2,6 +2,7 @@
 layout: post
 title: Ubuntu 16.04 Init (with Docker)
 date: 2017-02-13 18:34:18.000000000 +07:00
+categories: dev
 tags: ubuntu docker
 ---
 This should be a bunch of commands, handy just for my use.
@@ -81,6 +82,7 @@ Should see:
 docker-engine:
   Installed: (none)
   Candidate: 1.11.1-0~xenial
+categories: dev
   Version table:
      1.11.1-0~xenial 500
         500 https://apt.dockerproject.org/repo ubuntu-xenial/main amd64 Packages

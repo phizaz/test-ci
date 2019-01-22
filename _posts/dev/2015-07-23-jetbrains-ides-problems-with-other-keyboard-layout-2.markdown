@@ -2,9 +2,11 @@
 layout: post
 title: Jetbrains' IDEs Problems with Other Keyboard Layout
 date: 2015-07-23 11:06:00.000000000 +07:00
+categories: dev
 tags: dev
 ---
 ***Update: It seems this process doesn't work anymore, I'm currently using Karabiner-trick instead***
+categories: dev
 
 When I started to use PyCharm CE (Community Edition; Free) other than finding that it is a really good IDE, personally it's better than using my favorite text editor, I found out that it had problems with non-QWERTY keyboard layouts as well. Since I'm using the Dvorak keyboard layout, (something that's not QWERTY) I was in a trouble.
 

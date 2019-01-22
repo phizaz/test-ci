@@ -2,6 +2,7 @@
 layout: post
 title: Windows 10 Mouse Pointer Stutters under High CPU Load
 date: 2017-02-18 08:10:03.000000000 +07:00
+categories: dev
 tags: windows
 ---
 When I move my mouse while the CPU is under a high load, the mouse pointer occasionally *stutters*, lags, and after a short peroid of time it became as normal, it suffers more when I tab `alt+tab` to switch windows. 

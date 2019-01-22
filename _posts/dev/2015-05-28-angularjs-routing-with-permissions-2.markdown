@@ -141,6 +141,7 @@ angular.module 'app', [ ... many injectors ...]
       # so, anyone can get in
       if not next.data? or not next.data.roles?
         # update intendedState
+categories: dev
         intendedState = next.name
         return
 
@@ -149,6 +150,7 @@ angular.module 'app', [ ... many injectors ...]
       # no permission checking this time (we've checked him last time)
       if next.name is intendedState
         # update intendedState
+categories: dev
         intendedState = next.name
         return
 

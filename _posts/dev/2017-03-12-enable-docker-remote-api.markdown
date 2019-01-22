@@ -2,6 +2,7 @@
 layout: post
 title: Enable Docker Remote API
 date: 2017-03-12 06:47:28.000000000 +07:00
+categories: dev
 tags: docker
 ---
 Do you know that `docker` doesn't allow remote API as default. So, if you want to use the remote interpreter feature of PyCharm, you are out of luck out of the box.

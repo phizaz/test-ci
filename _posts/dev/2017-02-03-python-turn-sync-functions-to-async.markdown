@@ -2,6 +2,7 @@
 layout: post
 title: Python turn sync functions to async and awaitable using threads
 date: 2017-02-03 16:27:45.000000000 +07:00
+categories: dev
 tags: python
 ---
 Not all io bound commands are ported to asynchronous reducing somehow the worthy of **asyncio** library. In fact, we can interpolate the use of both async and sync functions with relative ease of implementation.

@@ -2,6 +2,7 @@
 layout: post
 title: Poor scrolling performance using bootstrap-select on a large list
 date: 2015-09-13 11:13:00.000000000 +07:00
+categories: dev
 tags: web
 ---
 **Bootstrap select** ([เว็บไซต์](http://silviomoreto.github.io/bootstrap-select/)) เป็น plugin ที่ทำให้เราสามารถ "รับประกัน" ประสบการณ์การใช้งาน dropdown list ของผู้ใช้ได้ เนื่องจากโดยปกติแล้ว dropdown list หรือ `<select>` มีความแตกต่างขึ้นอยู่กับ browser และก็ยากต่อการกำหนดค่าต่าง ๆ เนื่องจากสามารถกำหนดค่า CSS ได้อย่างจำกัดอย่างยิ่ง จึงมีคนคิด bootstrap select ขึ้นมาโดยอาศัยการจำลอง "ปุ่มกด" ประกอบกับเทคนิคเล็กน้อย เพื่อใช้แทน `<select>`

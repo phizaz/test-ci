@@ -2,6 +2,7 @@
 layout: post
 title: Docker compose network ip specified
 date: 2017-01-28 17:59:15.000000000 +07:00
+categories: dev
 tags: docker
 ---
 Normally, the IP address is not really important in the connection between Docker containers, becasue we can just use the hostnames, which are easier to use and more intuitive to use. 

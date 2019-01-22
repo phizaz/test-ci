@@ -2,6 +2,7 @@
 layout: post
 title: Python's Unittest not seeing the exception from other threads
 date: 2016-08-03 08:51:55.000000000 +07:00
+categories: dev
 tags: python
 ---
 I don't know if using many threads for testing is a good practice or not. However, I do use it, and I do suffer the consequences from it.

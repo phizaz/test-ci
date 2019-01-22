@@ -2,6 +2,7 @@
 layout: post
 title: Docker Recipe for "gcsfuse" (Google Cloud Storage FUSE)
 date: 2017-02-26 18:08:49.000000000 +07:00
+categories: dev
 tags: docker cloud
 ---
 ### What's gcsfuse ? 

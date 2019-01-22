@@ -2,6 +2,7 @@
 layout: post
 title: To Deal With NodeJS Unhandled Promise Rejection Warning
 date: 2017-01-14 03:10:03.000000000 +07:00
+categories: dev
 tags: js
 ---
 ```

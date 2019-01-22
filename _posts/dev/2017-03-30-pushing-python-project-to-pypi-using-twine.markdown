@@ -2,6 +2,7 @@
 layout: post
 title: Pushing Python Project to Pypi using Twine
 date: 2017-03-30 07:36:02.000000000 +07:00
+categories: dev
 tags: python
 ---
 (thread: https://github.com/pypa/twine#why-should-i-use-this)

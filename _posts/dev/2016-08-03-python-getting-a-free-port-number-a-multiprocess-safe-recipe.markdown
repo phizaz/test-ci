@@ -2,6 +2,7 @@
 layout: post
 title: 'Python Getting A Free Port Number : A Multiprocess-safe Recipe'
 date: 2016-08-03 15:34:15.000000000 +07:00
+categories: dev
 tags: python
 ---
 Goal: a function `get_free_port() -> port number` that supports multi-thread and multi-process race condition. 

@@ -2,6 +2,7 @@
 layout: post
 title: Python's pseudo terminal (PTY) examples
 date: 2016-09-03 15:36:33.000000000 +07:00
+categories: dev
 tags: python
 ---
 If you're like me, when you first starting using `subprocess.Popen` you would inherently think that you can invoke any kind of command using this.

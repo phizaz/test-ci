@@ -2,6 +2,7 @@
 layout: post
 title: Angular's Directive ES6 Era
 date: 2015-11-10 14:18:00.000000000 +07:00
+categories: dev
 tags: angular
 ---
 ปกติ directive ที่เขียนอยู่ใน AngularJS official documentation จะแนะนำให้เราเขียนแบบนี้

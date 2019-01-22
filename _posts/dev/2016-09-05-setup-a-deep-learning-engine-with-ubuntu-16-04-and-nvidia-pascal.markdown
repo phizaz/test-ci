@@ -2,6 +2,7 @@
 layout: post
 title: Setup A Deep Learning Engine With Ubuntu 16.04 + Nvidia Pascal + Nvidia Docker
 date: 2016-09-05 13:45:28.000000000 +07:00
+categories: dev
 tags: ubuntu cuda
 ---
 I have seen a lot of instruction on building and setting up a machine learner, but with nvidia-docker I practically have seen so little relatively.

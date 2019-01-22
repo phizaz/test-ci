@@ -2,6 +2,7 @@
 layout: post
 title: Node Mysql Multiple Statements
 date: 2017-02-02 16:15:32.000000000 +07:00
+categories: dev
 tags: js mysql
 ---
 If you happen to use `npm install mysql` or the native mysql connetion libary for node. You might encounter with my problem.

@@ -2,6 +2,7 @@
 layout: post
 title: 'Python CatchableProcess: Catch exceptions in spawned processes'
 date: 2016-08-07 08:39:37.000000000 +07:00
+categories: dev
 tags: python
 ---
 Normally, a parent process and a spawned process will have no link in between, meaning thrown errors from each process will be quite independent. The parent is ignorant to the errors in the child process, and vice versa. 

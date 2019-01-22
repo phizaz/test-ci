@@ -2,6 +2,7 @@
 layout: post
 title: Screenshot in Ubuntu using Shutter
 date: 2017-02-25 09:35:42.000000000 +07:00
+categories: dev
 tags: ubuntu
 ---
 You probably have this app pre-installed so search for it first.

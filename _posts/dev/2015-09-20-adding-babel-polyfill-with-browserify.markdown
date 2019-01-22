@@ -2,6 +2,7 @@
 layout: post
 title: Adding babel-polyfill with Browserify
 date: 2015-09-20 14:19:00.000000000 +07:00
+categories: dev
 tags: js web
 ---
 ปกติเราใช้ babel เมื่อเราต้องการใช้ฟีเจอร์บางอย่างของ es6 ([อ่านเพิ่ม](https://github.com/lukehoban/es6features)) ซึ่งวิธีการทำงานของ babel ก็คล้าย ๆ กับ coffeescript ซึ่งก็คือแปลงนั้น ๆ กลับมาเป็น javascript ES5 ให้สามารถรันได้ทาง web browser ทั่ว ๆ ไป (ไม่ใช่ทุก browser จะรองรับ es6 ในปริมาณที่เท่ากัน) ซึ่งในเว็บไซต์ documentation ของ babel เองก็จะระบุไว้ว่าแต่ละฟีเจอร์นั้นจะต้อง setup babel ไม่เหมือนกันบางฟีเจอร์อาจจะต้องการการติดตั้งมากกว่าอันอื่นเล็กน้อย บางอันอาจจะต้องอาศัยโปรแกรมอื่นช่วยเช่น คำสั่ง import ที่ต้องอาศัยเครื่องมือตัวกลางมาคอย require ไฟล์ต่าง ๆ ให้เพราะว่า browser babel ไม่ได้ใส่เครื่องมือพวกนี้มาให้

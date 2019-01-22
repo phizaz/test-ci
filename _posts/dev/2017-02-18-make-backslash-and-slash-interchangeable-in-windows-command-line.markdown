@@ -2,6 +2,7 @@
 layout: post
 title: Make \ (backslash) and / (slash) interchangeable in Windows command line
 date: 2017-02-18 09:16:37.000000000 +07:00
+categories: dev
 tags: windows
 ---
 File: `slash.cmd`

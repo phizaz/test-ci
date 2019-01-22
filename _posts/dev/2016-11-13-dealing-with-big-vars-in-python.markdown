@@ -2,6 +2,7 @@
 layout: post
 title: Dealing with Big Vars in Python
 date: 2016-11-13 18:51:45.000000000 +07:00
+categories: dev
 tags: python
 ---
 I have encountered memory leak in python, and It's not fun at all. Its obscuration consumed so much of energy and time. 

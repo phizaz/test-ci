@@ -2,6 +2,7 @@
 layout: post
 title: RSYNC - THE GREAT DOWN-UP-LOAD TOOL
 date: 2016-10-15 09:59:30.000000000 +07:00
+categories: dev
 tags: cloud
 ---
 วันนี้ผมอยากจะโฆษณา `rsync` ไม่รู้ว่าหลายคนรู้จักกันอยู่แล้วหรือเปล่า แต่ผมเพิ่งรู้จักมันไม่นานนี่เอง 
@@ -42,6 +43,7 @@ rsync -avz /abc ta@172.16.123.10:~/backup
 *The graph originates with the Compression Tools Compared 2005 article by http://www.linuxjournal.com/.*
 
 ส่วน `-a` คือ archive mode ซึ่งจะก้อบไปทุก folder แบบ recursive และพยายามรักษาหน้าตาของแต่ละไฟล์ไว้ให้เหมือนบนเครื่องต้นทางมากที่สุด ก็คือรักษาพวก modified date, created date เอาไว้ รวมทั้ง permissions ต่าง ๆ ด้วย
+categories: dev
 
 เจ้าตัว `rsync` นี่มีมานานมากแล้วจริง ๆ (และแทบจะอยู่บนทุกคเรื่องที่ไม่ใช่ Windows) แล้วก็กลายเป็นโปรแกรมมาตรฐานในการ sync ข้อมูลไปแล้ว เพราะฉะนั้นสำหรับความน่าเชื่อถือนี่ก็สูงทีเดียว !
 

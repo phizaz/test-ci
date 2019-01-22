@@ -2,6 +2,7 @@
 layout: post
 title: A way to set cmd's alias with variables like %cd% and %home%
 date: 2017-02-09 16:50:16.000000000 +07:00
+categories: dev
 tags: windows
 ---
 To set alias for a very long command in cmd, just type 

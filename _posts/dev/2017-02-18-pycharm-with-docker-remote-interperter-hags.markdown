@@ -2,9 +2,11 @@
 layout: post
 title: Pycharm with Docker Remote Interpreter Hangs
 date: 2017-02-18 07:57:32.000000000 +07:00
+categories: dev
 tags: docker python
 ---
 **Update: It has been solved in **Python 2017.1 EAP****
+categories: dev
 
 I reported the issue at https://youtrack.jetbrains.com/issue/PY-22786
 
@@ -12,6 +14,7 @@ I reported the issue at https://youtrack.jetbrains.com/issue/PY-22786
 Docker version 1.13.1, build 092cba3
 **Docker image: phizaz/sklearn (basically installs numpy, scipy, scikit-learn)**
 Using this image, PyCharm will slowly update the skeleton and **even the bar is full it won't finish**, I even left the computer for a day and it didn't finish.
+categories: dev
 
 Here is the captured screenshot: 
 

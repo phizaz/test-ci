@@ -2,6 +2,7 @@
 layout: post
 title: Managing Tensorflow GPU Memory Usage
 date: 2017-10-23 05:31:00.000000000 +07:00
+categories: dev
 tags: tensorflow
 ---
 <style type="text/css">
@@ -2603,28 +2604,38 @@ input[type="search"] {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   input[type="date"].form-control,
+categories: dev
   input[type="time"].form-control,
   input[type="datetime-local"].form-control,
+categories: dev
   input[type="month"].form-control {
     line-height: 32px;
   }
   input[type="date"].input-sm,
+categories: dev
   input[type="time"].input-sm,
   input[type="datetime-local"].input-sm,
+categories: dev
   input[type="month"].input-sm,
   .input-group-sm input[type="date"],
+categories: dev
   .input-group-sm input[type="time"],
   .input-group-sm input[type="datetime-local"],
+categories: dev
   .input-group-sm input[type="month"] {
     line-height: 30px;
   }
   input[type="date"].input-lg,
+categories: dev
   input[type="time"].input-lg,
   input[type="datetime-local"].input-lg,
+categories: dev
   input[type="month"].input-lg,
   .input-group-lg input[type="date"],
+categories: dev
   .input-group-lg input[type="time"],
   .input-group-lg input[type="datetime-local"],
+categories: dev
   .input-group-lg input[type="month"] {
     line-height: 45px;
   }

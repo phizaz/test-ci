@@ -2,6 +2,7 @@
 layout: post
 title: Run Node as a Background Service and Starts on Startup (Windows)
 date: 2017-02-07 16:02:36.000000000 +07:00
+categories: dev
 tags: js
 ---
 Ever wonder how to make your node application works as a background process and has a nice easy to use management interface ? 
