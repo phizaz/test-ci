@@ -1,0 +1,33 @@
+---
+layout: post
+title: Swap Alt and Ctrl Ubuntu 16.04
+date: 2017-03-12 07:16:41.000000000 +07:00
+tags: ubuntu
+---
+Using `dconf-editor`, if you have already tried the `xmodmap` way, tried this one ... it's superior because the **xmodmap** will fail (and need to be rerun) after you change the keyboard layout, furthermore, it has no currently reliable way to start it on login or after boot.
+
+So, let's get started, if you don't have one:
+
+```
+sudo apt install dconf-editor
+```
+
+Open it up, and see the `org.gnome.desktop.input-sources.xkb-options`, you might see `[]` for now, but update it to `['ctrl:swap_lalt_lctl','ctrl:swap_ralt_rctl']`.
+
+You should see the effect immediately.
+
+Furthermore, you might have problem with `alt+tab` (now currently is `ctrl+tab`), if you want to change to `ctrl+tab`, just to keep it matched with the physical `alt`, read on.
+
+### Change Alt + Tab to Ctrl + Tab
+
+It turns out even you have the `unity-tweak-tool` it's not at all straightforward to change this, because the tool won't allow you to bind `ctrl+tab` actually it won't allow even `alt+tab`, I think it's a bug or the app has no privilege to intercept the `alt+tab` itself.
+
+So, another way is through the `compizconfig-settings-manager`, if you don't have it just install.
+
+In it, you should find the **Ubuntu Unity Plugin** section, go to **Switcher**. 
+
+Now update it to be as follows, see the **Key to start the switcher** is now set to `<Control>Tab`:
+
+![](/content/images/2017/03/Screenshot-from-2017-03-11-23-52-36.png)
+
+If you want to also change the shortcut for switching windows in the same app (which default is **alt + grave accent**), you may change it now with the **Key to flip through windows in the Switcher** set it to **control + grave accent** instead.

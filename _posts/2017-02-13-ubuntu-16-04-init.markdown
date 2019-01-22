@@ -1,0 +1,128 @@
+---
+layout: post
+title: Ubuntu 16.04 Init (with Docker)
+date: 2017-02-13 18:34:18.000000000 +07:00
+tags: ubuntu docker
+---
+This should be a bunch of commands, handy just for my use.
+
+### Create User
+
+```
+adduser user
+# add to sudo group
+usermod -aG sudo user
+```
+
+```
+# from your station
+ssh-copy-id user@ip
+```
+
+Or
+
+```
+# manually
+# from your station
+cat ~/.ssh/id_rsa.pub
+# copy it
+# to your remote (user)
+mkdir ~/.ssh
+chmod 500 ~/.ssh
+vim ~/.ssh/authorized_keys
+# paste it, save, quit
+chmod 600 ~/.ssh/authorized_keys
+```
+
+
+### Swapfile
+
+(thread: https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04)
+
+Allocate
+
+```
+sudo fallocate -l 1G /swapfile
+```
+
+Enable
+
+```
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+# see the result
+sudo swapon --show
+```
+
+Make Swap Permanent
+
+```
+# back up old setting
+sudo cp /etc/fstab /etc/fstab.bak
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+```
+
+
+### Docker
+
+(thread: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04)
+
+```
+sudo apt-get update
+sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+sudo apt-add-repository 'deb https://apt.dockerproject.org/repo ubuntu-xenial main'
+sudo apt-get update
+apt-cache policy docker-engine
+```
+
+Should see:
+```
+docker-engine:
+  Installed: (none)
+  Candidate: 1.11.1-0~xenial
+  Version table:
+     1.11.1-0~xenial 500
+        500 https://apt.dockerproject.org/repo ubuntu-xenial/main amd64 Packages
+     1.11.0-0~xenial 500
+        500 https://apt.dockerproject.org/repo ubuntu-xenial/main amd64 Packages
+```
+
+```
+sudo apt-get install -y docker-engine
+sudo systemctl status docker
+```
+
+Should see:
+```
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+   Active: active (running) since Sun 2016-05-01 06:53:52 CDT; 1 weeks 3 days ago
+     Docs: https://docs.docker.com
+ Main PID: 749 (docker)
+```
+
+Make it run without sudo:
+
+```
+sudo usermod -aG docker $(whoami)
+# relogin
+```
+
+```
+docker info
+```
+
+#### Docker Compose
+(thread: https://docs.docker.com/compose/install/)
+
+You might be tempted to install it from `apt-get` but you will get an old version.
+
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.10.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+```
+docker-compose --help
+```
