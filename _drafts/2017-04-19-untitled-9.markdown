@@ -1,0 +1,12 @@
+---
+layout: post
+title: Using cmder with Git Bash is a way to go
+---
+```
+# just cannot do this with cmd.exe, but it works juts fine with git bash
+docker rm $(docker ps -aq)
+```
+
+Formerly, I used cmder + cmd.exe and I wasn't satisfied by the fact that I cannot use `$(...)` like I could with bash. Here, where git bash comes to the rescue. 
+
+Here is how you do it https://www.awmoore.com/2015/01/14/setting-up-git-and-cmder/

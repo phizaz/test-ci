@@ -1,0 +1,6 @@
+---
+layout: post
+title: MBR vs GPT
+---
+https://wiki.archlinux.org/index.php/Partitioning
+

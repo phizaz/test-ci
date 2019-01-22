@@ -1,0 +1,6 @@
+---
+layout: post
+title: start usin google cloud storage
+---
+just go straight to creating a service account  (with owner privilege)
+

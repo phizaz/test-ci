@@ -1,0 +1,39 @@
+---
+layout: post
+title: What's new in Python 3.6
+---
+(thread: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep498)
+
+### Formatted String Literal
+
+```
+>>> name = "Fred"
+>>> f"He said his name is {name}."
+'He said his name is Fred.'
+>>> width = 10
+>>> precision = 4
+>>> value = decimal.Decimal("12.34567")
+>>> f"result: {value:{width}.{precision}}"  # nested fields
+'result:      12.35'
+```
+
+### Type Hints for Functions
+
+```
+primes: List[int] = []
+
+captain: str  # Note: no initial value!
+
+class Starship:
+    stats: Dict[str, int] = {}
+```
+
+### Underscore in Numerics
+
+```
+>>> 1_000_000_000_000_000
+1000000000000000
+>>> 0x_FF_FF_FF_FF
+4294967295
+```
+

@@ -1,0 +1,5 @@
+---
+layout: post
+title: apt update gpg error "NO_PUBKEY"
+---
+http://askubuntu.com/questions/13065/how-do-i-fix-the-gpg-error-no-pubkey

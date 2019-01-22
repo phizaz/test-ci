@@ -1,0 +1,11 @@
+---
+layout: post
+title: Apt dryrun
+---
+```
+apt update
+# download only mode
+apt upgrade -d
+# upgrade
+apt upgrade 
+```

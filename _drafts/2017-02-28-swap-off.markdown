@@ -1,0 +1,17 @@
+---
+layout: post
+title: Swap off
+---
+```
+swapoff /swapfile
+```
+
+```
+vim /etc/fstab
+```
+
+remove the line
+
+```
+/swapfile .....
+```

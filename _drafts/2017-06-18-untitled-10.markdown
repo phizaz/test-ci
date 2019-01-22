@@ -1,0 +1,23 @@
+---
+layout: post
+title: Jupyter not to cache the module compilation !
+---
+https://support.enthought.com/hc/en-us/articles/204469240-Jupyter-IPython-After-editing-a-module-changes-are-not-effective-without-kernel-restart
+
+IPython autoreload http://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html
+
+It has caveats, taken from the source:
+
+> ### Caveats
+
+> Reloading Python modules in a reliable way is in general difficult, and unexpected things may occur. %autoreload tries to work around common pitfalls by replacing function code objects and parts of classes previously in the module with new versions. This makes the following things to work:
+
+> * Functions and classes imported via ‘from xxx import foo’ are upgraded to new versions when ‘xxx’ is reloaded.
+> * Methods and properties of classes are upgraded on reload, so that calling ‘c.foo()’ on an object ‘c’ created before the reload causes the new code for ‘foo’ to be executed.
+
+> Some of the known remaining caveats are:
+
+> * Replacing code objects does not always succeed: changing a @property in a class to an ordinary method or a method to a member variable can cause problems (but in old objects only).
+> * Functions that are removed (eg. via monkey-patching) from a module before it is reloaded are not upgraded.
+> * C extension modules cannot be reloaded, and so cannot be autoreloaded.
+

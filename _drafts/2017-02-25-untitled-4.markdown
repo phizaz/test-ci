@@ -1,0 +1,18 @@
+---
+layout: post
+title: ubuntu switch back to secondary display when the primary disconnected
+---
+http://superuser.com/questions/155004/switch-monitors-from-the-command-line
+
+![](/content/images/2017/02/012_phizaz@ta---.png)
+
+```
+# reset main monitor to auto mode
+xrandr --output eDP-1 --auto
+# to turn it off 
+xrandr --output eDP-1 --off
+```
+
+Put it in the **custom shortcuts**:
+![](/content/images/2017/02/013_Keyboard.png)
+

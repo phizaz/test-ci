@@ -1,0 +1,11 @@
+---
+layout: post
+title: TeamViewer cannot connect to server
+---
+Restart the daemon
+
+```
+sudo service teamviewerd restart
+```
+
+And reopen the app

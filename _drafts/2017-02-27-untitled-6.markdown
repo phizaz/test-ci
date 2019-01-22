@@ -1,0 +1,42 @@
+---
+layout: post
+title: Disk Usage
+---
+du /path/to/dir
+du /etc
+du /home/nixcraft
+du /root /home/nixcraft
+
+Pass the -h option to get output in human readable format i.e. show output in kilobytes (K), megabytes (M) and gigabytes (G):
+du -h /etc
+du -h /dir1/file2
+du -h /root
+du -h
+
+Sample outputs:
+
+8.0K	./.vim
+24K	./scripts
+48K	./.ssh
+16K	./.keychain
+2.2M	./.lftp
+2.4M	.
+Pass the -s option to see the total disk space used by a directory:
+du -sh
+du -sh /etc/
+du -sh /etc /home/ /securebackup/
+
+Sample outputs:
+
+4.1M	/etc
+152K	/home/
+902M	/securebackup/
+Pass the -c to see a grand total for all of the files, type:
+du -csh /root/ /etc/ /home/
+
+Sample outputs:
+
+2.4M	/root/
+4.1M	/etc/
+152K	/home/
+6.6M	total
