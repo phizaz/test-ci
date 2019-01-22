@@ -1,8 +1,8 @@
 ---
 layout: home
-title: Me
+title: All
+permalink: /all/
 pagination: 
   enabled: true
-  category: me
   permalink: /:num/
 ---
