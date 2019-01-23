@@ -19,7 +19,7 @@ email: the.akita.ta@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   O thou, I long to rival thy greatest invention, the mind.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://blog.konpat.me" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
