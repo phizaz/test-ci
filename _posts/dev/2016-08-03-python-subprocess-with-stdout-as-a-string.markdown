@@ -8,9 +8,10 @@ tags: python
 You can use `subprocess.check_output` which will redirect `stdout` to the function call's return value
 
 Something like:
-```
+```python
 import subprocess
 
 output = subprocess.check_output(['which', 'python'])
 print(output)
 ```
+

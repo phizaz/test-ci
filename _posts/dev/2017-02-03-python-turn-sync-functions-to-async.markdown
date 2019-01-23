@@ -9,7 +9,7 @@ Not all io bound commands are ported to asynchronous reducing somehow the worthy
 
 I will try using threading interfaces to do the job, in the end I will `force_async` on a synchronous function and turn it into async one.
 
-```
+```python
 def force_async(fn):
     '''
     turns a sync function to async function using threads
@@ -29,7 +29,7 @@ def force_async(fn):
 
 Usage:
 
-```
+```python
 @force_async
 def long_blocking_function():
     import time

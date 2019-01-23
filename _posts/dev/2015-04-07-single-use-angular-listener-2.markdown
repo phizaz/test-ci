@@ -9,7 +9,7 @@ tags: [angular, web]
 
 เราจะเริ่มจาก listener ปกติใน AngularJs ซึ่งสามารถใช้งานได้ดังนี้ (สมมติว่าผูกไว้กับ rootScope)
 
-```
+```coffeescript
 $rootScope.$on 'message-name', (event, value) ->
 	 ... do something interesting here ...
 ```
@@ -18,7 +18,7 @@ listener ตัวนี้จะ "ฟัง" message ทุก ๆ ชิ้น
 
 แต่ในบางครั้งเราต้องการให้มันทำงานเพียงแค่ครั้งเดียว กล่าวคือหากมีการเรียก call-back function นั้นแล้วก็ให้ ถือว่า listener นี้ไม่มีตัวตนอีกต่อไป ใน AngularJS เราสามารถทำได้ดังนี้
 
-```
+```coffeescript
 deregister = $rootScope.$on '<message>', (event, value) ->
 	 deregister()
 	 ... do something interesting here ...

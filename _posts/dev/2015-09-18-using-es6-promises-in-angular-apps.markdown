@@ -5,11 +5,11 @@ date: 2015-09-18 16:21:00.000000000 +07:00
 categories: dev
 tags: js angular
 ---
-ที่จริงคอนเซ็ปต์เรื่อง promise ไม่ใช่เรื่องใหม่ ([อ่านเพิ่มเติม](http://www.2ality.com/2014/09/es6-promises-foundations.html)เรื่อง promise) และ Angular เองก็ได้รับเอาคอนเซ็ปต์นี้เข้ามาเป็นส่วนหนึ่งของ framework ซึ่งเราจะเรียกใช้งานได้จากการ inject $q (วิธีการใช้ [$q](https://docs.angularjs.org/api/ng/service/$q)) โดยผมพบด้วยตัวผมเองว่าการใช้ promise ทำให้ผมสามารถทำงานกับ Angular ได้อย่างมีความสุขขึ้นอย่างมาก โค้ดที่เขียนออกมานั้นอ่านและเข้าใจได้ง่ายกว่าเดิมมาก จากเดิมต้องเขียนด้วยการใช้ callback ซึ่งก็เข้าใจยากด้วยตัวเองอยู่แล้ว ยังยากต่อการอ่านให้รู้เรื่องด้วยเนื่องจากการเขียน callback ไม่ได้ถูกออกแบบมาให้อ่านด้วยมนุษย์ได้ง่าย ๆ
+ที่จริงคอนเซ็ปต์เรื่อง promise ไม่ใช่เรื่องใหม่ ([อ่านเพิ่มเติม](http://www.2ality.com/2014/09/es6-promises-foundations.html)เรื่อง promise) และ Angular เองก็ได้รับเอาคอนเซ็ปต์นี้เข้ามาเป็นส่วนหนึ่งของ framework ซึ่งเราจะเรียกใช้งานได้จากการ inject \$q (วิธีการใช้ [​$q](https://docs.angularjs.org/api/ng/service/$q)) โดยผมพบด้วยตัวผมเองว่าการใช้ promise ทำให้ผมสามารถทำงานกับ Angular ได้อย่างมีความสุขขึ้นอย่างมาก โค้ดที่เขียนออกมานั้นอ่านและเข้าใจได้ง่ายกว่าเดิมมาก จากเดิมต้องเขียนด้วยการใช้ callback ซึ่งก็เข้าใจยากด้วยตัวเองอยู่แล้ว ยังยากต่อการอ่านให้รู้เรื่องด้วยเนื่องจากการเขียน callback ไม่ได้ถูกออกแบบมาให้อ่านด้วยมนุษย์ได้ง่าย ๆ
 
 แต่สำหรับคนที่ไม่เคยได้ยินคำว่า promise มาก่อน ผมจะอธิบยไว้ตรงนี้เสียหน่อยว่ามันก็เหมือนกับ "สัญญา" ดังความหมายของมันนั่นแหละ มันคือสิ่งที่จะมี "ค่า" ในอนาคต แม้ว่ายังไม่ใช่ตอนนี้ ลักษณะการใช้งานทั่ว ๆ ไปที่เราจะเห็นได้ก็เช่น 
 
-```
+```js
 let a = some promise;
 a.then(
 	function afterA(promisedValue) {
@@ -21,7 +21,7 @@ a.then(
 
 อีกหนึ่งตัวอย่างที่แสดงว่า promise มันน่าจะดีกว่า callback แน่ ๆ ก็เช่น
 
-```
+```js
 let a = some promise;
 a
 .then(
@@ -40,7 +40,7 @@ a
 
 จะเห็นว่า afterB จะทำงานหลังจาก afterA ซึ่งหากเราต้องการให้ มีการทำงานของทั้งสัญญา a และ b พร้อม ๆ แบบไม่ต้องรอกัน แต่เราต้องการดูเพียงว่า ทั้งสองทำงานเสร็จแล้วจึงเรียกอะไรบางอย่างมาทำงาน เราจะเขียนได้แบบนี้
 
-```
+```js
 let a = some promise;
 let b = some other promise;
 Promise
@@ -55,7 +55,7 @@ Promise
 
 การเชื่อมโดยใช้ .then() ต่อ ๆ กันไปเรื่อย ๆ ก็น่าสนใจดี แต่ว่าบางครั้ง เราต้องการเชื่อมอย่างมีเงื่อนไข  เช่นว่าถ้าในเงื่อนไขแบบหนึ่งเราก็จะเชื่อมแบบหนึ่ง หากภายใต้เงื่อนไขอีกแบบหนึ่งเราอจจะเชื่อมอีกแบบ สามารถเขียนได้ดังนี้
 
-```
+```js
 let a = some proimes;
 let promise = a;
 
@@ -101,8 +101,8 @@ promise
 **ไฟล์ : dashboard.route.js**
 เราจะระบุการ routing ของ ส่วนนี้ไว้ที่นี่ ประกอบกับข้อมูลที่จำเป็นต้องได้ก่อนที่จะเข้าสู่ state นั้น ๆ ได้
 
-```
-import angular from `angular';
+```js
+import angular from 'angular';
 import 'angular-ui-router';
 
 import {backendServiceModule} from './backend.service';
@@ -135,7 +135,7 @@ export var dashboardRouteModule = partial;
 **ไฟล์ : backend.service.js**
 ซึ่งเราจะเขียน abstraction สำหรับการเรียก request ไปยัง server ไว้ที่นี่
 
-```
+```js
 import angular from 'angular';
 
 class Backend {
@@ -160,7 +160,7 @@ method getUserInfo() นั้น return เป็น promise เนื่อง
 **ไฟล์ : dashboard.controller.js**
 ซึ่งเราจะเขียน controller และใช้งานข้อมูลของผู้ใช้ที่เราได้ดึงมาจาก backend ที่นี่
 
-```
+```js
 import angular from 'angular';
 
 let partial = angular.module('dashboardControllerModule', []);

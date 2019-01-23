@@ -13,20 +13,20 @@ And also, with the new [pypi.io](http://pypi.io), you don't really need to regis
 
 ### Build
 
-```
+```bash
 pip install wheel
 python setup.py sdist bdist_wheel # building wheel
 ```
 
 ### Register (if needed; not needed for pypi.io) 
 
-```
+```bash
 twine register dist/...
 ```
 
 ### Upload 
 
-```
+```bash
 twine upload dist/...<file .whl>
 ```
 

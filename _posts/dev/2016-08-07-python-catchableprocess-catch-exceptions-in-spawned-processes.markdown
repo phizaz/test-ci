@@ -10,3 +10,4 @@ Normally, a parent process and a spawned process will have no link in between, m
 I wrote this class to solve that problem, on calling `p.join()` on the parent process (`p` is the spawned process) all the thrown errors will be propagated to the parent as well.
 
 <script src="https://gist.github.com/phizaz/dc45756db1197cee83bbdfa964a1b46a.js"></script>
+

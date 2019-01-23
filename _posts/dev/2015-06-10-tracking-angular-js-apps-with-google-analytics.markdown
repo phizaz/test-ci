@@ -20,7 +20,7 @@ So far, the cleanest solution I found has been provided with an answer to this v
 The code snippet is as follows:  
 (Note: I use *Angular UI router* instead of the native router)
 
-```
+```coffeescript
 rootScope.$on '$stateChangeSuccess', () ->
 	$window.ga 'send', 'pageview', { page: $location.url() }
 ```
@@ -33,7 +33,7 @@ The above snippet will listen to every route change and call the Google Analytic
 
 And also put your tracking code (get it from Google Analytics website) on the main page of your website let's say `index.html`
 
-```
+```coffeescript
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

@@ -7,7 +7,7 @@ tags: python
 ---
 For `socket`, use: 
 
-```
+```python
 import socket
 
 sock = socket.socket()
@@ -17,7 +17,7 @@ sock.close()
 ```
 
 For `socketserver`, use:
-```
+```python
 import socketserver
 
 socketserver.TCPServer.allow_reuse_address = True

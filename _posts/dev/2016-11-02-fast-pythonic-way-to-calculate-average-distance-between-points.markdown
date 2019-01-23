@@ -9,7 +9,7 @@ Finding an average distance between two sets of points (vectors) in a n-demensio
 
 A normal way to do this is something like:
 
-```
+```python
 import numpy as np
 def dist(a, b):
     return np.linalg.norm(a - b)
@@ -26,7 +26,7 @@ There are so many ways out there to improve by the means of optimizations, it is
 
 I found this, using `cdist` from `scipy`, and `sum` from `numpy` :
 
-```
+```python
 def dist_cluster_avg_fast(points_A, points_B):
     from scipy.spatial.distance import cdist
     arr = cdist(points_A, points_B, metric='euclidean')
@@ -35,7 +35,7 @@ def dist_cluster_avg_fast(points_A, points_B):
 
 How much the gain ? You might ask, here it is.
 
-```
+```python
 points_A = np.random.rand(500, 100)
 points_B = np.random.rand(500, 100)
 

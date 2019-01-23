@@ -17,7 +17,7 @@ tags: angular
 
 ## ตัวอย่างการใช้งาน
 
-```
+```js
 import angular from 'angular';
 //importing directive.js
 import Directive from './directive';

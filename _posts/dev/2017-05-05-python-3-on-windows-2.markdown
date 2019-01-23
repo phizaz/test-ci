@@ -63,7 +63,7 @@ Unfortunately, multi-threading for speed boost under computational intensive is 
 
 As a matter of fact, Windows' process is quite slow to start, this greatly reduces the viability of python's `multiprocessing.Pool`. If spawning a new process is slow, then should we spawn less processes and distribute a larger bit of work for each process instead ? This is exactly what `chunksize` parameter in `pool.imap` does.
 
-```
+```python
 from multiprocessing import Pool
 
 with Pool() as pool:

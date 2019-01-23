@@ -12,7 +12,7 @@ Actually, I don't know how this happen, just can't narrow it down enough to a pi
 
 The situation can be described here:
 
-```
+```python
 # no globals
 
 def ...
@@ -39,7 +39,7 @@ Note2: For those who aren't familiar with `multiprocess`, it's essentially impor
 
 The point is to run `trigger()` many times, may be in this fashion:
 
-```
+```python
 for i in range(10):
 	trigger()
 ```
@@ -57,7 +57,7 @@ Here are some of my unfruitful experiments:
 And, here are some working experiments:
 
 A. Declaring an initializer:
-```
+```python
 def pool_init():
 	import gc
 	gc.collect()
@@ -66,7 +66,7 @@ pool = Pool(initializer=pool_init)
 ```
 
 B. Put `gc.collect()` before declaring pool:
-```
+```python
 import gc
 gc.collect()
 pool = Pool()

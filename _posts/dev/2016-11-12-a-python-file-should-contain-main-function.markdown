@@ -7,7 +7,7 @@ tags: python
 ---
 I think I found a recipe for a new Python file:
 
-```
+```python
 def ...(): ...
 def ...(): ...
 

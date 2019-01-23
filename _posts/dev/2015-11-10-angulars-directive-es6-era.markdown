@@ -7,7 +7,7 @@ tags: angular
 ---
 ปกติ directive ที่เขียนอยู่ใน AngularJS official documentation จะแนะนำให้เราเขียนแบบนี้
 
-```
+```js
 var app = angular.module('app', [])
 app.directive('directiveName', 
   function () {
@@ -29,7 +29,7 @@ app.directive('directiveName',
 
 แต่นั่นก็คือวิธีการเขียนแบบ es5 ซึ่งตอนนี้ยุคของ es6 กำลังมาถึง ก็อาจจะถึงเวลาที่เราจะปรับตัวเองไปสู่สิ่งที่ดีกว่า แน่นอนว่า es6 จะช่วยให้เราเขียนได้งดงามขึ้น และสมเหตุสมผลมากขึ้น โดยอาศัย `class` เข้าช่วย
 
-```
+```js
 import _ from 'lodash';
 import angular from 'angular';
 

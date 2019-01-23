@@ -14,7 +14,7 @@ tags: [angular, web]
 ### Basic approach
 ผมจัดการ routing ใน AngularJS ด้วย angular-ui-router ซึ่งก็เป็น pagkage ที่หลายคนแนะนำว่าดีมีความสามารถหลากหลายกว่าตัวหลักของ AngularJS เอง ผมอาจจะเร่ิมเขียน หน้า *routes.coffee* ดังนี้
 
-```
+```coffeescript
 angular.module 'routes', []
 .config [
   '$stateProvider'
@@ -35,7 +35,7 @@ angular.module 'routes', []
 
 โดยสมมติว่าผมมี userService ไว้สำหรับทำงานเช่น เช็คว่าผู้ใช้ login อยู่หรือเปล่า หรืองานอื่น ๆ 
 
-```
+```coffeescript
 angular.module 'user', []
 .controller [
   '$scope'
@@ -67,7 +67,7 @@ angular.module 'user', []
 ดังนั้นผมจึงต้องระบุข้อมูลบางอย่างเพิ่มเติมในแต่ละ route ว่า "ใครเข้าได้บ้าง?" ผมเห็นคนแก้ปัญหานี้ด้วยการเลียนแบบ mode ในระบบปฎิบัติการพวก unix และ unix-like
 
 #### เพิ่มไฟล์ constant.coffee
-```
+```js
 angular.module 'constant', []
 
 .constant 'USER_ROLES',
@@ -83,7 +83,7 @@ angular.module 'constant', []
 #### แก้ routes.coffee
 เราต้องการให้หน้า user เข้าได้แค่ member (ในที่นี้ admin ก็อาจจะเข้าได้ แต่ว่าไม่ใช่ประเด็นอะไร)
 
-```
+```coffeescript
 angular.module 'routes', []
 .config [
   '$stateProvider'
@@ -121,7 +121,7 @@ angular.module 'routes', []
 
 ผมจะพยายามเขียน comment ให้ละเอียดเพื่อจะได้อ่านแล้วเข้าใจได้ง่ายขึ้น
 
-```
+```coffeescript
 angular.module 'app', [ ... many injectors ...]
 .run [
   '$rootScope'

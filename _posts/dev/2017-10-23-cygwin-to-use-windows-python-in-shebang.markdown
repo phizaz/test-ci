@@ -8,7 +8,7 @@ tags: cygwin
 Create a bash script as a proxy:
 
 Filename `wpython` save it some where in your `$PATH`
-```
+```bash
 #!/bin/bash
 path=$1
 # remove the first argument
@@ -18,7 +18,7 @@ python.exe $(cygpath -w $path) $@
 
 Now, we can use this shebang:
 
-```
+```bash
 #! /usr/bin/env wpython
 ```
 

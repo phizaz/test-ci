@@ -3,14 +3,14 @@ layout: post
 title: Ethereum CUDA Mining with nvidia-docker
 date: 2016-11-19 08:34:52.000000000 +07:00
 categories: dev
-tags: cuda, crypto
+tags: [cuda, crypto]
 ---
 Somebody has done quite a good job : https://github.com/Anthony-Tatowicz/docker-ethminer
 
 But, if you're using Nvidia's Pascal cards, you're better off using CUDA 8.0 not 7.5 as of the above's Dockerfile says.
 
 So the new Dockerfile should be begin with: 
-```
+```dockerfile
 FROM nvidia/cuda:8.0-devel-ubuntu14.04
 ```
 
@@ -30,7 +30,7 @@ So, actually, you have to make some change to the *cloned* source.
 
 Here, I will change the course of the Dockerfile a bit, so that we can do the change : 
 
-```
+```bash
 git clone https://github.com/Genoil/cpp-ethereum.git
 cd cpp-ethereum/libethash-cuda
 vim CMakeLists.txt
@@ -46,7 +46,7 @@ set(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS};--std=c++11;--disable-warnings;--ptxas-op
 ```
 
 Now, to the Dockerfile, instead of cloning we will be copying instead: 
-```
+```dockerfile
 COPY cpp-ethereum /cpp-ethereum
 RUN cd cpp-ethereum \
     && mkdir build \
@@ -60,7 +60,7 @@ Note : I added `-DCOMPUTE=61` flag because I use GTX 1060, this should be option
 **It should work now!**
 
 Try : 
-```
+```bash
 nvidia-docker run -it --rm <yourimage> /cpp-ethereum/build/ethminer/ethminer -U --benchmark
 ```
 Note : use `-U` not `-G`; since `-G` = opencl, `-U` = cuda

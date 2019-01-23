@@ -16,7 +16,7 @@ One way to mitigate this problem is to create a *GlobalExceptionWatcher* that wi
 The implementation **I found over the internet** was kinda *hack*, yet using with cautions it worked!
 
 It goes...
-```
+```python
 class GlobalExceptionWatcher(object):
     import threading
     import os
@@ -59,7 +59,7 @@ class GlobalExceptionWatcher(object):
 
 You can now use:
 
-```
+```python
 class ExceptionOnThreadTest(unittest.TestCase):
     def test_exception_on_thread(self):
         import threading

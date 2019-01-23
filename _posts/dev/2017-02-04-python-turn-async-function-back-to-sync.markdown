@@ -11,7 +11,7 @@ It is `asyncio.get_event_look().run_until_complete(...)`
 
 Now, I will just wrap it into a nicer package, like this:
 
-```
+```python
 def force_sync(fn):
     '''
     turn an async function to sync function
@@ -30,7 +30,7 @@ def force_sync(fn):
 
 Here is how to use it:
 
-```
+```python
 @force_sync
 async def run():
     ... do some async works ...
@@ -39,3 +39,4 @@ results = run()
 ```
 
 For those who look for the vice versa, turning a sync to async, I have wrote it [here](https://blog.konpat.me/python-turn-sync-functions-to-async/)
+

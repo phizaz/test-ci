@@ -9,7 +9,7 @@ If you are going to run another python script (using Python), don't forget to us
 
 Something like this:
 
-```
+```python
 import subprocess
 import sys
 

@@ -32,7 +32,7 @@ tags: python
 
 เราสามารถเขียนไฟล์ `math_service.py` ได้ดังนี้
 
-```
+```python
 from gaw import entrypoint
 
 class MathService(object):
@@ -48,13 +48,13 @@ class MathService(object):
 
 ทดลองรัน MathService ด้วยคำสั่งผ่าน command-line ดังนี้ ซึ่งจะรัน MathService ไว้บน localhost พอร์ต 5555 โดยหากใครต้องการจะตัดต่อกับ MathService ก็ต้องติดต่อผ่าน TCP socket มาทางที่อยู่ดังกล่าว
 
-```
+```bash
 $ gaw math_service --port=5555
 ```
 
 แล้วเราก็จะเขียนไฟล์ `test_math_service.py` มาลองยิง request ไปถามดูว่ามันทำงานได้หรือเปล่า ?
 
-```
+```python
 from gaw import GawClient
 client = GawClient('127.0.0.1', 5555)
 rpc = client.math_service
@@ -67,7 +67,7 @@ print(rpc.plus(1,2))
 
 เราจะเขียนไฟล์ `cache_service.py` ได้ดังนี้
 
-```
+```python
 from gaw import entrypoint
 
 class CacheCore(object):
@@ -104,13 +104,13 @@ class CacheService(object):
 
 และเราก็ต้องรัน Cache Service ด้วยคำสั่งนี้
 
-```
+```bash
 $ gaw cache_service --port=5556
 ```
 
 และเราจะทดลอบมันด้วยไฟล์ `test_cache_service.py` ดังนี้
 
-```
+```python
 from gaw import GawClient
 
 client = GawClient('127.0.0.1', 5556)
@@ -126,7 +126,7 @@ print(rpc.get('a'))
 
 เราจะเอาสองระบบนี้มารวมกันเพื่อให้มันเป็นระบบที่สมบูรณ์ได้ด้วยการแก้ไขโค้ดของ `math_service.py` อีกเล็กน้อย เป็นดังนี้
 
-```
+```python
 from gaw import entrypoint, GawClient, JsonSocketException
 
 cache_service = GawClient('127.0.0.1', 5556).cache_service
@@ -159,7 +159,7 @@ class MathService(object):
 
 ทดลองการบวกเลขของเราได้ที่ไฟล์ `test_math_service.py`
 
-```
+```python
 from gaw import GawClient
 client = GawClient('127.0.0.1', 5555)
 rpc = client.math_service
