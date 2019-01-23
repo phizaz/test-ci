@@ -3,9 +3,9 @@ layout: post
 title: Mass upload and download client for all your cloud drives
 date: 2017-03-12 07:31:14.000000000 +07:00
 categories: dev
-tags: cloud
+tags: [cloud, tips]
 ---
-Not all platforms are supported with native clients, even the simple tasks of downloand and uploading (not even syncing) ... I have gone so far as buliding my own download and upload client with the cloud drive of choice, but to make it reliable one must be very resourceful to do so.
+Not all platforms are supported with native clients, even the simple tasks of download and uploading (not even syncing) ... I have gone so far as building my own download and upload client with the cloud drive of choice, but to make it reliable one must be very resourceful to do so.
 
 I have found `rclone` (rsync for cloud drive; [link](http://rclone.org/)) app just recently, it worked just like I always wanted to do, simple upload and download a lot of files.
 

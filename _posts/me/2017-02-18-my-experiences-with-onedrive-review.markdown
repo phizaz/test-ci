@@ -2,7 +2,7 @@
 layout: post
 title: My Experiences with OneDrive (Review)
 date: 2017-02-18 09:45:55.000000000 +07:00
-categories: dev
+categories: me
 tags: cloud
 ---
 I have been using OneDrive for 2 months already, here I like to review my experiences with **OneDrive** a bit. In short, it's **sluggish, memory hungry, and not FAULT tolerant.**

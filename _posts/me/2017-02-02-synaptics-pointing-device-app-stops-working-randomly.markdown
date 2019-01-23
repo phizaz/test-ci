@@ -2,8 +2,8 @@
 layout: post
 title: Synaptics Pointing Device app stops working randomly
 date: 2017-02-02 16:16:18.000000000 +07:00
-categories: dev
-tags: windows lenovo
+categories: me
+tags: [windows, hardware]
 ---
 (Thread: http://superuser.com/questions/504178/synaptics-touchpad-stops-working-randomly)
 

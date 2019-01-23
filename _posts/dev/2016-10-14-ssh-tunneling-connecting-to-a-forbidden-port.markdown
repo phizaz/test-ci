@@ -12,19 +12,19 @@ You are blocked from making connection to a port, say, 6666. Luckily, you still 
 
 We can do SSH tunneling to get through the firewall via port 22 (which is not blocked here) and use a pivotal server to connect to the port 6666 relaying all the data back to us behind the firewall.
 
-```
+```bash
 ssh -L <local_port>:<target_host>:<target_port> <pivotal_host>
 ```
 
 In this case, it might be:
 
-```
+```bash
 ssh -L 22:targethost.com:6666 me@pivotalhost.com
 ```
 
 Then, you can ssh, via the pivotalhost.com, to the targethost.com using 
 
-```
+```bash
 ssh me@localhost [-p 22]
 ```
 

@@ -9,7 +9,9 @@ tags: windows mac
 
 # Deprecated !
 
-Many of this is based on the post https://github.com/felixrieseberg/windows-development-environment
+Many of this is based on the post [https://github.com/felixrieseberg/windows-development-environment](https://github.com/felixrieseberg/windows-development-environment)
+
+As of 2018, I do not anymore keep mac conventions (be it shortcuts etc.), I have relearned all the keymaps and use it as frequent as the old days with my mac. A lessen learned was that I should not customize to much such that my machine is so different from other machines out there in the world. I was at some point crippled while using other people's machines. 
 
 ### Shells
 

@@ -3,7 +3,7 @@ layout: post
 title: Setup A Deep Learning Engine With Ubuntu 16.04 + Nvidia Pascal + Nvidia Docker
 date: 2016-09-05 13:45:28.000000000 +07:00
 categories: dev
-tags: ubuntu cuda
+tags: [ubuntu, cuda]
 ---
 I have seen a lot of instruction on building and setting up a machine learner, but with nvidia-docker I practically have seen so little relatively.
 
@@ -22,7 +22,7 @@ So, if you don't have it in your machine already, here is a good place to start 
 Second thing, you need a working driver for your nvidia pascal graphic card, which means GTX1060, 70, 80 and Titan. You will need a nvidia graphic driver better than 367.44 (the first version of the base line graphic driver to support Pascals), or if you to test on more recent drivers you can go to 370 line which is less stable.
 
 
-```
+```bash
 # if you don't have the 'add-apt-repository'
 apt-get install software-properties-common
 # begin !!
@@ -51,6 +51,6 @@ NVIDIA drivers >= 340.29 with binary nvidia-modprobe
 
 And whenever you want to run a docker, run `nvidia-docker` instead:
 
-```
+```bash
 nvidia-docker run --rm nvidia/cuda nvidia-smi
 ```

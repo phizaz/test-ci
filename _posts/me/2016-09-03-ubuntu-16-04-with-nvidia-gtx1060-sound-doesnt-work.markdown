@@ -2,7 +2,7 @@
 layout: post
 title: Ubuntu 16.04  with Nvidia GTX1060 Sound Doesn't Work
 date: 2016-09-03 06:23:11.000000000 +07:00
-categories: dev
+categories: me
 tags: ubuntu
 ---
 Even after properly installed Nvidia graphic card driver (367.44, latest) still the sound doesn't work.

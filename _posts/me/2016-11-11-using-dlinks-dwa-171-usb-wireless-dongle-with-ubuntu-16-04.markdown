@@ -2,8 +2,8 @@
 layout: post
 title: Using DLink's DWA 171 USB Wireless Dongle with Ubuntu 16.04
 date: 2016-11-11 19:21:05.000000000 +07:00
-categories: dev
-tags: ubuntu
+categories: me
+tags: [ubuntu, hardware]
 ---
 It doesn't come with a working official driver though.
 
@@ -11,7 +11,7 @@ So, I googled for it, and found: https://ubuntuforums.org/showthread.php?t=21684
 
 Here is an excerpt worth mentioning, from user **chili555**
 
-```
+```bash
 sudo apt-get install git
 git clone https://github.com/abperiasamy/rtl8812AU_8821AU_linux.git
 cd rtl8812AU_8821AU_linux

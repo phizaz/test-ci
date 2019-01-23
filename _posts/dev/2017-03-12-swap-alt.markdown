@@ -3,7 +3,7 @@ layout: post
 title: Swap Alt and Ctrl Ubuntu 16.04
 date: 2017-03-12 07:16:41.000000000 +07:00
 categories: dev
-tags: ubuntu
+tags: [ubuntu, tips]
 ---
 Using `dconf-editor`, if you have already tried the `xmodmap` way, tried this one ... it's superior because the **xmodmap** will fail (and need to be rerun) after you change the keyboard layout, furthermore, it has no currently reliable way to start it on login or after boot.
 

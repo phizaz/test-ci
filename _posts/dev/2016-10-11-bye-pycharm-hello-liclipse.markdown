@@ -4,6 +4,8 @@ title: Bye ... PyCharm, Hello LiClipse
 date: 2016-10-11 15:24:30.000000000 +07:00
 categories: dev
 ---
+As of 2018, I don't use both. I use **visual studio code** and **jupyterlab** to complete by development loop.
+
 PyCharm is my best Python IDE.
 
 I make the switch because of one one reason. Since I've been using Dvorak for quite sometime, PyCharm just don't support it properly, PyCharm key mapping doesn't work with alternative keyboard layouts (even though they blamed it wasn't their faults). 

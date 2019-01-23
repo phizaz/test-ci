@@ -1,8 +1,8 @@
 ---
 layout: post
-title: RSYNC - THE GREAT DOWN-UP-LOAD TOOL
+title: Rsync - A great upload tool
 date: 2016-10-15 09:59:30.000000000 +07:00
-categories: dev
+categories: me
 tags: cloud
 ---
 วันนี้ผมอยากจะโฆษณา `rsync` ไม่รู้ว่าหลายคนรู้จักกันอยู่แล้วหรือเปล่า แต่ผมเพิ่งรู้จักมันไม่นานนี่เอง 
