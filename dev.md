@@ -7,3 +7,5 @@ pagination:
   category: dev
   permalink: /:num/
 ---
+
+Code snippets and development centric blogs during my developer years.

@@ -6,3 +6,5 @@ pagination:
   category: me
   permalink: /:num/
 ---
+
+Non-technical blogging section, for blogs during when I was a developer [here](/dev)
