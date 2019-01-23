@@ -1,6 +1,7 @@
 ---
 layout: home
-title: Development
+title: Development Struggles
+short: Dev
 permalink: /dev/
 pagination: 
   enabled: true

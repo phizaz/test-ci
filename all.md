@@ -1,6 +1,7 @@
 ---
 layout: home
-title: All Posts
+title: All Struggles
+short: All
 permalink: /all/
 pagination: 
   enabled: true
