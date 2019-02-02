@@ -152,12 +152,15 @@ $$
 
 ในกรณีของ off-policy เราจะต้องคูณ $$\rho$$ ของแต่ละ reward ให้ถูกต้อง หน้าแต่ละ reward เพื่อทำให้ได้ค่าเหมือนเดิม
 
+
 $$
 \mathrm{E}_{r_{t+1}, r_{t+2}, \dots \sim b} \left[ \rho_{t:t}r_{t+1} + \rho_{t:t+1}r_{t+2} + \dots \right] = v_\pi
 $$
+
+
 จะเห็นว่าเราต้องใช้ แต่ละ $$\rho$$ สำหรับแต่ละ reward วิธีการนี้จึงมีชื่อว่า **Per-decision Importance Sampling** ก็เพราะว่าเราสร้าง importance sampling สำหรับแต่ละ decision (แต่ละ action แต่ละ reward) เลย 
 
-ในการ Implement จริง ๆ เราจะต้องเขียนได้ว่า $$v(s)$$ นั้นหามาจากไหน เราจะเขียนได้ว่า
+ในการ Implement จริง ๆ เราจะต้องเขียนได้ว่า $$v(s)​$$ นั้นหามาจากไหน เราจะเขียนได้ว่า
 
 $$
 \begin{equation}
@@ -170,7 +173,7 @@ $$
 - $$\sum_{k=t}^{T-1} \rho_{t:k} r_{t+1}​$$ ตรงนี้จริง ๆ แล้วก็คือ ผลรวมของ reward ที่ผ่านการคูณด้วย importance sampling ratio แล้ว
 - ส่วนที่เหลือก็คือการหาค่า "เฉลี่ย" จากหลาย ๆ ครั้งนั่นเอง (เพราะว่าค่าคาดหวังก็คือค่าเฉลี่ย)
 
-การหาค่าเฉลี่ยในที่นี้ใช้เครื่องหมาย $$\tau(s)​$$ ช่วย โดยเราจำหนดขึ้นมาที่นี้ว่า $$\tau(s)​$$ เป็น set ของทุก ๆ timestep ที่ state "ผ่าน" state $$s​$$ พอดิบพอดี ดังนั้นการหาค่าเฉลี่ยของทุก ๆ ครั้งที่เราวิ่งผ่าน $$s​$$ ก็คือการหา "ค่าเฉลี่ยของผลรวม reward ทุก ๆ ครั้งที่เริ่มจาก $$s​$$" นั่นเอง
+การหาค่าเฉลี่ยในที่นี้ใช้เครื่องหมาย $$\tau(s)​$$ ช่วย โดยเรากำหนดขึ้นมาที่นี้ว่า $$\tau(s)​$$ เป็น set ของทุก ๆ timestep ที่ state "ผ่าน" state $$s​$$ พอดิบพอดี ดังนั้นการหาค่าเฉลี่ยของทุก ๆ ครั้งที่เราวิ่งผ่าน $$s​$$ ก็คือการหา "ค่าเฉลี่ยของผลรวม reward ทุก ๆ ครั้งที่เริ่มจาก $$s​$$" นั่นเอง
 
 เพิ่มเติม: การกำหนด $$\tau(s)$$ ว่าเป็น set ของทุก ๆ timestep ที่ผ่าน state $$s$$ เรียกว่า **every-visit Monte Carlo** อีกวิธีหนึ่งที่เราทำได้ ก็คือ "สนใจเฉพาะ $$s$$ แรกของแต่ละ episode เท่านั้น" เราก็จะแก้ความหมาย $$\tau(s)$$ เล็กน้อย แล้วเรียกว่า **first-visit Monte Carlo** ความต่างของทั้งสองก็คือ every-visit นั้น implement ง่ายกว่า เพราะเราไม่ต้องจำว่าเราผ่าน state นี้ครั้งแรกหรือเปล่า แต่ว่าอาจจะให้ค่าที่แปลก ๆ เพราะหากเราผ่าน state $$s$$ หลายครั้งในหนึ่ง episode ค่า $$v(s)​$$ จะเป็นค่าเฉลี่ยจากทุกครั้งที่เราผ่าน ต่างกับกรณี first-visit ที่จะสนใจเฉพาะค่าแรกเท่านั้น
 
@@ -257,30 +260,30 @@ $$
 
 สิ่งที่เราเห็นต่อมาก็คือ อยู่ดี ๆ เราจะแก้ตามอำเภอใจแบบนี้ไม่ได้สิ คำตอบแบบสั้น ๆ ก็คือ เรายอม "ผิด" เพราะว่าสมการ $$\eqref{eq:weighted_is}$$ นั้น bias ไม่ได้ให้ค่าที่ถูกต้องโดยเฉลี่ยเหมือนกับ importance sampling ทั่วไป แต่เราก็ยอมจ่ายเพราะว่ามันช่วยให้เราทำงานกับมันได้ง่ายมากขึ้น
 
-คำถามต่อมาก็คือ แล้วมัน bias ไปขนาดไหนล่ะ? เพราะว่าถ้ามัน bias แบบไม่เห็นเค้าเดิมเลยมันก็ไม่น่าจะดีอยู่แล้ว จริงอย่างว่า เพราะว่า สมการ $$\eqref{eq:weighted_is}$$ นั้นมี bias ก็จริง แต่ว่าขนาดของ bias นั้น "น้อยลง" เรื่อย ๆ หากเราเฉลี่ยด้วยจำนวนที่มากขึ้น และมัน "เข้าใกล้" ค่าจริงเมื่อเราเฉลี่ยด้วยจำนวนอนันต์ แต่แน่นอนว่าเราไม่ได้เฉลี่ยด้วยจำนวนอนันต์จึงต้องยอมรับว่า มันก็ยัง bias อยู่ดี 
+คำถามต่อมาก็คือ แล้วมัน bias ไปขนาดไหนล่ะ? เพราะว่าถ้ามัน bias แบบไม่เห็นเค้าเดิมเลยมันก็ไม่น่าจะดีอยู่แล้ว จริงอย่างว่า เพราะว่า สมการ $$\eqref{eq:weighted_is}​$$ นั้นมี bias ก็จริง แต่ว่าขนาดของ bias นั้น "น้อยลง" เรื่อย ๆ หากเราเฉลี่ยด้วยจำนวนที่มากขึ้น และมัน "เข้าใกล้" ค่าจริงเมื่อเราเฉลี่ยด้วยจำนวนอนันต์ แต่แน่นอนว่าเราไม่ได้เฉลี่ยด้วยจำนวนอนันต์จึงต้องยอมรับว่า มันก็ยัง bias อยู่ดี 
 
 การแสดงว่ามันเข้าใกล้ค่าจริง เมื่อเฉลี่ยด้วยจำนวนอนันต์สามารถทำได้ดังนี้
 
 - เราอาศัยความจริงที่ว่า $$\mathrm{E}[\rho] = 1​$$ 
-- และเราจะแสดงว่า weighted importance sampling นั้นเข้าใกล้ importance sampling เมื่อ $$\tau(s)$$ มีขนาดอนันต์
+- และเราจะแสดงว่า weighted importance sampling นั้นเข้าใกล้ importance sampling เมื่อ $$\tau(s)​$$ มีขนาดอนันต์
 
 $$
 \begin{equation}
-\mathrm{E}_b \left[ \rho_{t:T-1} \right] = 1 = \frac{\sum_{t \in \tau(s)} \rho_{t:T-1}}{\left| \tau(s) \right|}
+\frac{\sum_{t \in \tau(s)} \rho_{t:T-1}}{\left| \tau(s) \right|} = \mathrm{E}_b \left[ \rho_{t:T-1} \right] = 1
 \label{eq:expect_rho_tau}
 \end{equation}
 $$
 
-สมการ $$\eqref{eq:expect_rho_tau}$$ จะเป็นจริงก็ด้วย [Law of large numbers](http://www.incompleteideas.net/book/ebook/node46.html) เท่านั้น ดังนั้นหาก $$\left \vert  \tau(s) \right \vert $$ ไม่ได้เยอะเข้าใกล้ $$\infty$$ แล้วก็พูดอย่างนั้นไม่ได้
+สมการ $$\eqref{eq:expect_rho_tau}$$ จะเป็นจริงก็ด้วย [Law of large numbers](http://www.incompleteideas.net/book/ebook/node46.html) เท่านั้น ดังนั้นหาก $$\left \vert  \tau(s) \right \vert $$ ไม่ได้เยอะเข้าใกล้ $$\infty$$ แล้วก็พูดอย่างนั้นไม่ได้ 
 
+หลังจากนั้นเราก็ทำการย้ายข้างเล็กน้อยดังนี้
 $$
 \begin{equation} 
-\left| \tau(s) \right| \mathrm{E}_b \left[ \rho_{t:T-1} \right] = \left| \tau(s) \right| = \sum_{t \in \tau(s)} \rho_{t:T-1}
+\sum_{t \in \tau(s)} \rho_{t:T-1} = \left| \tau(s) \right| \mathrm{E}_b \left[ \rho_{t:T-1} \right] = \left| \tau(s) \right|
 \end{equation}
 $$
 
-จึงได้ว่า
-
+นำค่าที่ได้ไปแทนในสมการ $$\eqref{eq:weighted_is}​$$ จะได้ว่า
 $$
 \begin{equation}
 \begin{split}
@@ -290,13 +293,13 @@ v(s) &= \frac{\sum_{t \in \tau(s)} \rho_{t:T-1} G_t}{\sum_{t \in \tau(s)} \rho_{
 \end{equation}
 $$
 
-นั่นก็คือเมื่อขนาด $$\left \vert  \tau(s) \right \vert $$ เยอะขึ้นก็จะช่วยให้ bias ของ weighted importance sampling เล็กลงนั่นเอง
+เราจะเห็นว่าจริง ๆ แล้ว weighted importance sampling กับ importance sampling ธรรมดานั้นมีค่าเท่ากันเมื่อ $$|\tau(s)|​$$ เป็นอนันต์ (ใหญ่พอ)
 
-หมายเหตุ: การจะทำแบบเดียวกันนี้กับ per-decision importance sampling นั้นไม่ตรงไปตรงมาเท่าใดนักก็เพราะว่า $$\rho$$ ของแต่ละ reward ไม่เหมือนกัน ทำให้พูดได้ยากว่าอะไรคือ weight ที่เหมาะสมกันแน่ อย่างไรก็ดีมีงานที่เสนอการทำ weighted per-decision importance sampling ชื่อว่า [Eligibility Traces for Off-Policy Policy Evaluation (2000)](https://scholarworks.umass.edu/cgi/viewcontent.cgi?article=1079&context=cs_faculty_pubs)
+หมายเหตุ: การจะทำแบบเดียวกันนี้กับ per-decision importance sampling นั้นไม่ตรงไปตรงมาเท่าใดนักก็เพราะว่า $$\rho​$$ ของแต่ละ reward ไม่เหมือนกัน ทำให้พูดได้ยากว่าอะไรคือ weight ที่เหมาะสมกันแน่ อย่างไรก็ดีมีงานที่เสนอการทำ weighted per-decision importance sampling ชื่อว่า [Eligibility Traces for Off-Policy Policy Evaluation (2000)](https://scholarworks.umass.edu/cgi/viewcontent.cgi?article=1079&context=cs_faculty_pubs)
 
 #### แสดงว่า $\mathrm{E}[\rho] = 1$
 
-เพื่อให้เห็นภาพจะแสดงให้ดูในกรณีของ $$r_{t+1}, r_{t+2}$$ อย่างละเอียดเพื่อให้เห็นภาพชัดเจน
+เพื่อให้เห็นภาพจะแสดงให้ดูในกรณีของ $$r_{t+1}, r_{t+2}​$$ อย่างละเอียดเพื่อให้เห็นภาพชัดเจน
 
 $$
 \rho_{t:t+1} = \frac{\pi(a_t|s_t)\pi(a_{t+1}|s_{t+1})}{b(a_t|s_t)b(a_{t+1}|s_{t+1})}
