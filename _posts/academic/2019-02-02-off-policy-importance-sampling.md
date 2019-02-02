@@ -293,11 +293,11 @@ v(s) &= \frac{\sum_{t \in \tau(s)} \rho_{t:T-1} G_t}{\sum_{t \in \tau(s)} \rho_{
 \end{equation}
 $$
 
-เราจะเห็นว่าจริง ๆ แล้ว weighted importance sampling กับ importance sampling ธรรมดานั้นมีค่าเท่ากันเมื่อ $$|\tau(s)|​$$ เป็นอนันต์ (ใหญ่พอ)
+เราจะเห็นว่าจริง ๆ แล้ว weighted importance sampling กับ importance sampling ธรรมดานั้นมีค่าเท่ากันเมื่อ $$\vert \tau(s) \vert$$ เป็นอนันต์ (ใหญ่พอ)
 
 หมายเหตุ: การจะทำแบบเดียวกันนี้กับ per-decision importance sampling นั้นไม่ตรงไปตรงมาเท่าใดนักก็เพราะว่า $$\rho​$$ ของแต่ละ reward ไม่เหมือนกัน ทำให้พูดได้ยากว่าอะไรคือ weight ที่เหมาะสมกันแน่ อย่างไรก็ดีมีงานที่เสนอการทำ weighted per-decision importance sampling ชื่อว่า [Eligibility Traces for Off-Policy Policy Evaluation (2000)](https://scholarworks.umass.edu/cgi/viewcontent.cgi?article=1079&context=cs_faculty_pubs)
 
-#### แสดงว่า $\mathrm{E}[\rho] = 1$
+#### แสดงว่า $$\mathrm{E}[\rho] = 1$$
 
 เพื่อให้เห็นภาพจะแสดงให้ดูในกรณีของ $$r_{t+1}, r_{t+2}​$$ อย่างละเอียดเพื่อให้เห็นภาพชัดเจน
 
