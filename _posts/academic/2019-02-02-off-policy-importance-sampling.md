@@ -4,17 +4,13 @@ title: Off-policy Importance Sampling
 categories: academic
 tags: rl, thai
 ---
-$$
-\require{cancel}
-$$
-
-ขั้นตอนในการเรียนรู้ policy ที่ดีใน reinforcement learning นั้น มักจะประกอบไปด้วยสองส่วน หนึ่ง คือส่วนที่เรียกว่า **prediction** ก็คือส่วนที่ตอบว่า "ถ้าเราเดินไปตามเส้นทางนี้ แล้วจะดีขนาดไหน" นั่นก็คือ "คาดการณ์" (prediction) ค่าของ $$v_\pi$$ และหรือ $$q_\pi$$ 
+ขั้นตอนในการเรียนรู้ policy ที่ดีใน reinforcement learning นั้น มักจะประกอบไปด้วยสองส่วน หนึ่ง คือส่วนที่เรียกว่า **prediction** ก็คือส่วนที่ตอบว่า "ถ้าเราเดินไปตามเส้นทางนี้ แล้วจะดีขนาดไหน" นั่นก็คือ "คาดการณ์" (prediction) ค่าของ $$v_\pi$$ และหรือ $$q_\pi​$$ 
 
 อีกส่วนหนึ่งก็คือส่วนที่เรียกว่า **control** ถ้าเรามีข้อมูลเหล่านี้ ($$v_\pi, q_\pi$$) หรือไม่มี จะสามารถหา policy ที่ดีได้อย่างไร ในกรณีของ GPI (General Policy Iteration) นั้น control (หา policy ที่ดี) นั้นอาศัยการ prediction ที่ดีมาก่อนด้วย นั่นทำให้ในหลาย ๆ ครั้งเราถือว่า prediction กับ control เหมือนกับสองส่วนที่ขาดจากกันไม่ได้
 
 ในที่นี้เราพูดถึงโจทย์ prediction เป็นหลัก โดยเฉพาะเราพูดถึงการ predict ค่า $$q_\pi$$ โดยที่เราไม่มีประสบการณ์จากการเล่น policy $$\pi$$ เลย  แต่เราได้ประสบการณ์จากาแหล่งอื่น ๆ แทน เราเรียกแหล่งนั้นว่า **behavioral policy** หรือ $$b$$ 
 
-**จะเป็นไปได้ไหม หรือต้องทำอย่างไรเราถึงจะได้ $$v_\pi$$ ในเมื่อเรามีแต่ประสบการณ์จาก $$b$$?** 
+**จะเป็นไปได้ไหม หรือต้องทำอย่างไรเราถึงจะได้ $$v_\pi$$ ในเมื่อเรามีแต่ประสบการณ์จาก $$b​$$?** 
 
 โจทย์นี้มีชื่ออย่างเป็นทางการว่า **Off-policy prediction** ก็เพราะว่าประสบการณ์ที่เรามีมัน off ไปจาก policy $$\pi$$
 
@@ -116,7 +112,7 @@ $$
 $$
 \begin{equation}
 \begin{split}
-\rho_{t:t} &= \frac{\pi(a_t|s_t) p(r_{t+1}|s_t, a_t)}{b(a_t|s_t) p(r_{t+1}|s_t, a_t)} \\
+\rho_{t:t} &= \frac{\pi(a_t|s_t) \cancel{p(r_{t+1}|s_t, a_t)}}{b(a_t|s_t) \cancel{p(r_{t+1}|s_t, a_t)}} \\
 &= \frac{\pi(a_t|s_t)}{b(a_t|s_t)}
 \end{split}
 \end{equation}
@@ -205,7 +201,7 @@ $$
 $$
 \begin{equation}
 \begin{split}
-\rho_{t:T-1} &= \prod_{k=t}^{T-1} \frac{\pi(a_t|s_t) p(r_{t+1}|s_t, a_t) p(s_{t+1}|s_t, a_t)}{b(a_t|s_t) p(r_{t+1}|s_t, a_t) p(s_{t+1}|s_t, a_t)} \\
+\rho_{t:T-1} &= \prod_{k=t}^{T-1} \frac{\pi(a_t|s_t) \cancel{p(r_{t+1}|s_t, a_t)} \cancel{p(s_{t+1}|s_t, a_t)}}{b(a_t|s_t) \cancel{p(r_{t+1}|s_t, a_t)} \cancel{p(s_{t+1}|s_t, a_t)}} \\
 &= \prod_{k=t}^{T-1} \frac{\pi(a_t|s_t)}{b(a_t|s_t)}
 \end{split}
 \end{equation}
@@ -292,7 +288,7 @@ $$
 
 หมายเหตุ: การจะทำแบบเดียวกันนี้กับ per-decision importance sampling นั้นไม่ตรงไปตรงมาเท่าใดนักก็เพราะว่า $$\rho$$ ของแต่ละ reward ไม่เหมือนกัน ทำให้พูดได้ยากว่าอะไรคือ weight ที่เหมาะสมกันแน่ อย่างไรก็ดีมีงานที่เสนอการทำ weighted per-decision importance sampling ชื่อว่า Eligibility Traces for Off-Policy Policy Evaluation (2000)
 
-#### แสดงว่า $$\mathrm{E}[\rho] = 1​$$
+#### แสดงว่า $\mathrm{E}[\rho] = 1$
 
 เพื่อให้เห็นภาพจะแสดงให้ดูในกรณีของ $$r_{t+1}, r_{t+2}$$ อย่างละเอียดเพื่อให้เห็นภาพชัดเจน
 
