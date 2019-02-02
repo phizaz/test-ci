@@ -6,7 +6,7 @@ tags: rl, thai
 ---
 ขั้นตอนในการเรียนรู้ policy ที่ดีใน reinforcement learning นั้น มักจะประกอบไปด้วยสองส่วน หนึ่ง คือส่วนที่เรียกว่า **prediction** ก็คือส่วนที่ตอบว่า "ถ้าเราเดินไปตามเส้นทางนี้ แล้วจะดีขนาดไหน" นั่นก็คือ "คาดการณ์" (prediction) ค่าของ $$v_\pi$$ และหรือ $$q_\pi​$$ 
 
-อีกส่วนหนึ่งก็คือส่วนที่เรียกว่า **control** ถ้าเรามีข้อมูลเหล่านี้ ($$v_\pi, q_\pi$$) หรือไม่มี จะสามารถหา policy ที่ดีได้อย่างไร ในกรณีของ GPI (General Policy Iteration) นั้น control (หา policy ที่ดี) นั้นอาศัยการ prediction ที่ดีมาก่อนด้วย นั่นทำให้ในหลาย ๆ ครั้งเราถือว่า prediction กับ control เหมือนกับสองส่วนที่ขาดจากกันไม่ได้
+อีกส่วนหนึ่งก็คือส่วนที่เรียกว่า **control** ถ้าเรามีข้อมูลเหล่านี้ ($$v_\pi, q_\pi$$) หรือไม่มี จะสามารถหา policy ที่ดีได้อย่างไร ในกรณีของ [GPI (Generalized Policy Iteration)](http://www.incompleteideas.net/book/ebook/node46.html) นั้น control (การหา policy ที่ดี) นั้นอาศัยการ prediction ที่ดีมาก่อนด้วย นั่นทำให้ในหลาย ๆ ครั้งเราถือว่า prediction กับ control เหมือนกับสองส่วนที่ขาดจากกันไม่ได้
 
 ในที่นี้เราพูดถึงโจทย์ prediction เป็นหลัก โดยเฉพาะเราพูดถึงการ predict ค่า $$q_\pi$$ โดยที่เราไม่มีประสบการณ์จากการเล่น policy $$\pi$$ เลย  แต่เราได้ประสบการณ์จากาแหล่งอื่น ๆ แทน เราเรียกแหล่งนั้นว่า **behavioral policy** หรือ $$b$$ 
 
@@ -14,7 +14,7 @@ tags: rl, thai
 
 โจทย์นี้มีชื่ออย่างเป็นทางการว่า **Off-policy prediction** ก็เพราะว่าประสบการณ์ที่เรามีมัน off ไปจาก policy $$\pi$$
 
-ก่อนที่จะไปต่อ กล่าวก่อนว่า off-policy prediction นั้นก็ไม่ได้มีสูตรสำเร็จ แต่ละวิธีก็อาจจะมีจุดแข็งจุดอ่อนของตัวเอง (เหมือนกับทุกอย่างใน RL) แต่เนื่องจาก off-policy prediction นั้นยากกว่า on-policy prediction (กรณีที่ไม่มี $$b$$) มาก ดังนั้นงานวิจัยในด้านนี้ก็ยังไม่เจริญเท่า 
+ก่อนที่จะไปต่อ กล่าวก่อนว่า off-policy prediction นั้นก็ไม่ได้มีสูตรสำเร็จ แต่ละวิธีก็อาจจะมีจุดแข็งจุดอ่อนของตัวเอง (เหมือนกับทุกอย่างใน RL) แต่เนื่องจาก off-policy prediction นั้นยากกว่า on-policy prediction (กรณีที่ไม่มี $$b​$$) มาก ดังนั้นงานวิจัยในด้านนี้ก็ยังไม่เจริญเท่า 
 
 เพราะฉะนั้นในบทความนี้เราก็อาจจะพูดแบบเกริ่น ๆ วิธีที่มีมานานแล้วของการทำ off-policy prediction ไปก่อนซึ่งในที่นี้เราจะเสนอไอเดียที่เรียกว่า Importance Sampling ซึ่งเป็นเทคนิคทางสถิติ ซึ่งเข้าใจได้ง่ายแม้จะไม่ได้เข้าใจ RL มากเท่าไหร่ 
 
@@ -265,7 +265,7 @@ $$
 \end{equation}
 $$
 
-สมการ $$\eqref{eq:expect_rho_tau}$$ จะเป็นจริงก็ด้วย Law of large numbers เท่านั้น ดังนั้นหาก $$\left \vert  \tau(s) \right \vert $$ ไม่ได้เยอะเข้าใกล้ $$\infty$$ แล้วก็พูดอย่างนั้นไม่ได้
+สมการ $$\eqref{eq:expect_rho_tau}$$ จะเป็นจริงก็ด้วย [Law of large numbers](http://www.incompleteideas.net/book/ebook/node46.html) เท่านั้น ดังนั้นหาก $$\left \vert  \tau(s) \right \vert $$ ไม่ได้เยอะเข้าใกล้ $$\infty$$ แล้วก็พูดอย่างนั้นไม่ได้
 
 $$
 \begin{equation} 
@@ -286,7 +286,7 @@ $$
 
 นั่นก็คือเมื่อขนาด $$\left \vert  \tau(s) \right \vert $$ เยอะขึ้นก็จะช่วยให้ bias ของ weighted importance sampling เล็กลงนั่นเอง
 
-หมายเหตุ: การจะทำแบบเดียวกันนี้กับ per-decision importance sampling นั้นไม่ตรงไปตรงมาเท่าใดนักก็เพราะว่า $$\rho$$ ของแต่ละ reward ไม่เหมือนกัน ทำให้พูดได้ยากว่าอะไรคือ weight ที่เหมาะสมกันแน่ อย่างไรก็ดีมีงานที่เสนอการทำ weighted per-decision importance sampling ชื่อว่า Eligibility Traces for Off-Policy Policy Evaluation (2000)
+หมายเหตุ: การจะทำแบบเดียวกันนี้กับ per-decision importance sampling นั้นไม่ตรงไปตรงมาเท่าใดนักก็เพราะว่า $$\rho$$ ของแต่ละ reward ไม่เหมือนกัน ทำให้พูดได้ยากว่าอะไรคือ weight ที่เหมาะสมกันแน่ อย่างไรก็ดีมีงานที่เสนอการทำ weighted per-decision importance sampling ชื่อว่า [Eligibility Traces for Off-Policy Policy Evaluation (2000)](https://scholarworks.umass.edu/cgi/viewcontent.cgi?article=1079&context=cs_faculty_pubs)
 
 #### แสดงว่า $\mathrm{E}[\rho] = 1$
 
