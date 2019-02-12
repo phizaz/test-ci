@@ -292,9 +292,9 @@ $$
 
 หมายเหตุ: การจะทำแบบเดียวกันนี้กับ per-decision importance sampling นั้นไม่ตรงไปตรงมาเท่าใดนักก็เพราะว่า $$\rho​$$ ของแต่ละ reward ไม่เหมือนกัน ทำให้พูดได้ยากว่าอะไรคือ weight ที่เหมาะสมกันแน่ อย่างไรก็ดีมีงานที่เสนอการทำ weighted per-decision importance sampling ชื่อว่า [Eligibility Traces for Off-Policy Policy Evaluation (2000)](https://scholarworks.umass.edu/cgi/viewcontent.cgi?article=1079&context=cs_faculty_pubs)
 
-#### แสดงว่า $\mathrm{E}[\rho] = 1$
+#### แสดงว่า $$\mathrm{E}[\rho] = 1$$
 
-เพื่อให้เห็นภาพจะแสดงให้ดูในกรณีของ $$r_{t+1}, r_{t+2}$$ อย่างละเอียดเพื่อให้เห็นภาพชัดเจน
+เพื่อให้เห็นภาพจะแสดงให้ดูในกรณีของ $$r_{t+1}, r_{t+2}​$$ อย่างละเอียดเพื่อให้เห็นภาพชัดเจน
 
 $$
 \rho_{t:t+1} = \frac{\pi(a_t|s_t)\pi(a_{t+1}|s_{t+1})}{b(a_t|s_t)b(a_{t+1}|s_{t+1})}
@@ -369,12 +369,10 @@ $$
 G_{t:t+n} = \left( \sum_{i=0}^{n-1} \rho_{t:t+i} \gamma^i r_{t+i+1} \right) + \rho_{t:t+n} \gamma^n \mathrm{E}_{a \sim \pi} \left[ q(s_{t+n}, a) \right]
 $$
 
-สำหรับ n-step expected SARSA เรามีการ n-1 ครั้งสำหรับ n reward แรก เหมือนกัน แต่ว่าเราไม่ได้สุ่มอีกเลยตอนหาค่า v เพราะเราหาค่าแบบเป๊ะ ๆ 
-
-จึงได้ว่าสำหรับ n-step expected SARSA เราสามารถเขียน off-policy ได้ดังนี้
+สำหรับ n-step expected SARSA เรามีการ n-1 ครั้งสำหรับ n reward แรก เหมือนกัน แต่ว่าเราไม่ได้สุ่มอีกเลยตอนหาค่า v เพราะเราหาค่าแบบเป๊ะ ๆ จึงได้ว่าสำหรับ n-step expected SARSA เราสามารถเขียน off-policy ได้ดังนี้
 
 $$
-G_{t:t+n} = \left( \sum_{i=0}^{n-1} \rho_{t:t+i} \gamma^i r_{t+i+1} \right) + \gamma^n \sum_a \pi(a|s_{t+n}) q(s_{t+n}, a)
+G_{t:t+n} = \left( \sum_{i=0}^{n-1} \rho_{t:t+i} \gamma^i r_{t+i+1} \right) + \rho_{t:t+n-1} \gamma^n \sum_a \pi(a|s_{t+n}) q(s_{t+n}, a)
 $$
 
 หมายเหตุ: เราสามารถใช้ได้ทั้ง importance sampling หรือ per-decision importance sampling หรือ weighted importance sampling เพียงแค่แก้ค่า $$G_{t:t+n}$$ ให้เหมาะสม
