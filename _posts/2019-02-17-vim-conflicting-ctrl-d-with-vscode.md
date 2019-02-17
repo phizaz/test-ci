@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Vim conflicting <Ctrl-d> with VSCode
+categories: dev
+tags: vscode
 ---
 
 VSCode **Vim** extension binds `<Ctrl-d>` for its own use. This keymap is used by VSCode for "selecting next word occurrence" in a multi-cursor fashion. If you like VSCode to handle this keymap (and others of your choice) you could do so via `vim.handleKeys` option.
