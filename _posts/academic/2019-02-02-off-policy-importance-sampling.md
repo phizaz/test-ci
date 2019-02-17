@@ -2,7 +2,7 @@
 layout: post
 title: Off-policy Importance Sampling
 categories: academic
-tags: rl, thai
+tags: rl thai
 ---
 ขั้นตอนในการเรียนรู้ policy ที่ดีใน reinforcement learning นั้น มักจะประกอบไปด้วยสองส่วน หนึ่ง คือส่วนที่เรียกว่า **prediction** ก็คือส่วนที่ตอบว่า "ถ้าเราเดินไปตามเส้นทางนี้ แล้วจะดีขนาดไหน" นั่นก็คือ "คาดการณ์" (prediction) ค่าของ $$v_\pi$$ และหรือ $$q_\pi​$$ 
 
