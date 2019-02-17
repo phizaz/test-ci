@@ -1,9 +1,8 @@
 ---
 layout: home
-title: Everyday Strugggles
+title: All struggles
 short: Me
 pagination: 
   enabled: true
-  category: me
   permalink: /:num/
 ---
