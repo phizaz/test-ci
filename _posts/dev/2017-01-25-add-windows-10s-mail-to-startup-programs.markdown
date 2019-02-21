@@ -2,7 +2,7 @@
 layout: post
 title: Add Windows 10's Mail to Startup Programs
 date: 2017-01-25 13:49:08.000000000 +07:00
-categories: me
+categories: dev
 tags: windows
 ---
 It turns out to be more obscure that I expected just to make the Windows' Mail app starts when I log in. I looked its settings I found none that indicates "starts when the user logs in" or so.

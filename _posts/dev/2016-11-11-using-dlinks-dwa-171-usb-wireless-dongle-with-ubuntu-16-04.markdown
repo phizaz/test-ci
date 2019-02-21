@@ -2,8 +2,8 @@
 layout: post
 title: Using DLink's DWA 171 USB Wireless Dongle with Ubuntu 16.04
 date: 2016-11-11 19:21:05.000000000 +07:00
-categories: me
-tags: [ubuntu, hardware]
+categories: dev
+tags: ubuntu hardware
 ---
 It doesn't come with a working official driver though.
 

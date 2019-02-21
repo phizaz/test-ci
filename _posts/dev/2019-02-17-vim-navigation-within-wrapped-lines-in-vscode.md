@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vim Navigation within Wrapped Lines in VSCode
+title: Vim navigation between wrapped Lines in VSCode
 categories: dev
 tags: vscode
 ---
