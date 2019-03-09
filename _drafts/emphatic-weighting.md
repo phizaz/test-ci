@@ -7,6 +7,16 @@ tags: rl
 
 
 
+
+
+
+
+Outline
+
+
+
+
+
 ### Semi-gradient
 
 
@@ -28,6 +38,3 @@ tags: rl
 
 
 ### Emphatic weighting 
-
-
-
